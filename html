@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Website title -->
+  <title>[YOUR NAME]</title>
+
+  <!-- Meta description -->
+  <meta
+    name="description"
+    content="Better products. Better experiences."
+  >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 48px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 900px;
+      text-align: left;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      margin-bottom: 28px;
+      color: #555555;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 0.98;
+      font-weight: 500;
+      letter-spacing: -0.055em;
+      max-width: 850px;
+      margin-bottom: 42px;
+    }
+
+    .intro {
+      max-width: 620px;
+      font-size: clamp(20px, 2.2vw, 28px);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .description {
+      max-width: 620px;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #555555;
+      margin-bottom: 42px;
+    }
+
+    .links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: #111111;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 1.5;
+      border-bottom: 1px solid #111111;
+      padding-bottom: 3px;
+      transition: opacity 0.2s ease;
+    }
+
+    .links a:hover {
+      opacity: 0.5;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 40px;
+      font-size: 13px;
+      color: #777777;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 28px 24px;
+      }
+
+      .content {
+        padding: 60px 0;
+      }
+
+      h1 {
+        margin-bottom: 32px;
+      }
+
+      .intro {
+        margin-bottom: 20px;
+      }
+
+      .description {
+        margin-bottom: 34px;
+      }
+
+      .links {
+        gap: 22px;
+      }
+
+      footer {
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <main>
+      <section class="content">
+
+        <div class="eyebrow">[YOUR NAME]</div>
+
+        <h1>
+          Better products.<br>
+          Better experiences.
+        </h1>
+
+        <p class="intro">
+          I help businesses shape products and client experiences with
+          clarity, intention, and precision.
+        </p>
+
+        <p class="description">
+          Bringing together strategic thinking and a close attention to detail
+          to create experiences that feel effortless and deliver lasting value.
+        </p>
+
+        <nav class="links" aria-label="Main navigation">
+          <a href="#about">About me →</a>
+          <a href="mailto:hello@example.com">Get in touch →</a>
+        </nav>
+
+      </section>
+    </main>
+
+    <footer>
+      © [YOUR NAME] 2026
+    </footer>
+
+  </div>
+
+</body>
+</html>
