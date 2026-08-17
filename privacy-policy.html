@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>P — Privacy Policy</title>
+
+  <meta
+    name="description"
+    content="Privacy Policy for P."
+  >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --black: #111111;
+      --muted: #666666;
+      --light: #888888;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--black);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 42px 48px 28px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin-bottom: 48px;
+
+      font-size: clamp(56px, 7vw, 82px);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -0.055em;
+
+      color: var(--black);
+    }
+
+    .privacy-text {
+      max-width: 650px;
+    }
+
+    .privacy-text .updated {
+      margin-bottom: 42px;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+
+      color: var(--light);
+    }
+
+    .privacy-text h2 {
+      margin-top: 44px;
+      margin-bottom: 18px;
+
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 500;
+      letter-spacing: -0.012em;
+
+      color: var(--black);
+    }
+
+    .privacy-text h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .privacy-text p {
+      margin-bottom: 28px;
+
+      font-size: 17px;
+      line-height: 1.72;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+
+      color: var(--muted);
+    }
+
+    .privacy-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-text ul {
+      margin: -8px 0 28px;
+      padding-left: 22px;
+
+      color: var(--muted);
+    }
+
+    .privacy-text li {
+      margin-bottom: 8px;
+
+      font-size: 17px;
+      line-height: 1.72;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+
+    .privacy-text a {
+      color: var(--black);
+      text-decoration: none;
+
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 3px;
+
+      transition: opacity 180ms ease;
+    }
+
+    .privacy-text a:hover {
+      opacity: 0.5;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-top: 52px;
+    }
+
+    .links a {
+      display: inline-block;
+
+      color: var(--black);
+      text-decoration: none;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 3px;
+
+      transition: opacity 180ms ease;
+    }
+
+    .links a:hover {
+      opacity: 0.5;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+
+      padding-top: 30px;
+
+      font-size: 12px;
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+
+      color: var(--light);
+    }
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding: 28px 24px 22px;
+      }
+
+      .content {
+        padding: 60px 0;
+      }
+
+      h1 {
+        margin-bottom: 36px;
+
+        font-size: clamp(48px, 14vw, 68px);
+        line-height: 1;
+        letter-spacing: -0.06em;
+      }
+
+      .privacy-text .updated {
+        margin-bottom: 34px;
+        font-size: 13px;
+      }
+
+      .privacy-text h2 {
+        margin-top: 36px;
+        margin-bottom: 16px;
+
+        font-size: 17px;
+      }
+
+      .privacy-text p {
+        margin-bottom: 24px;
+
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .privacy-text ul {
+        margin-bottom: 24px;
+        padding-left: 20px;
+      }
+
+      .privacy-text li {
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .links {
+        margin-top: 42px;
+        gap: 22px;
+      }
+
+      .links a {
+        font-size: 14px;
+      }
+
+      footer {
+        padding-top: 24px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .page {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <main>
+      <section class="content">
+
+        <h1>Privacy Policy</h1>
+
+        <div class="privacy-text">
+
+          <p class="updated">
+            Last updated: August 17, 2026
+          </p>
+
+
+          <h2>1. About This Policy</h2>
+
+          <p>
+            This Privacy Policy explains how P ("P," "we," "us," or "our")
+            handles information when you visit this website.
+          </p>
+
+          <p>
+            This website is primarily intended to present information about
+            P, its philosophy, approach, and work. We do not operate an
+            online store or sell products directly through this website.
+          </p>
+
+
+          <h2>2. Information You Provide</h2>
+
+          <p>
+            You may choose to contact P using the email link provided on
+            this website. If you do so, you may voluntarily provide
+            information such as your name, email address, and the contents
+            of your message.
+          </p>
+
+          <p>
+            We only receive information that you choose to provide when
+            contacting us.
+          </p>
+
+
+          <h2>3. How Information Is Used</h2>
+
+          <p>
+            Information you provide may be used to:
+          </p>
+
+          <ul>
+            <li>Respond to your inquiry or message</li>
+            <li>Communicate with you about your request</li>
+            <li>Maintain records of correspondence when reasonably necessary</li>
+          </ul>
+
+          <p>
+            We do not use information submitted through direct email
+            correspondence for marketing purposes unless you have
+            specifically requested or consented to receive such
+            communications.
+          </p>
+
+
+          <h2>4. Information Sharing</h2>
+
+          <p>
+            We do not sell, rent, or trade your personal information.
+          </p>
+
+          <p>
+            Information may be processed by service providers that support
+            the operation of this website or email communication. Such
+            providers may process information only as necessary to provide
+            their services.
+          </p>
+
+          <p>
+            Information may also be disclosed where required by law or when
+            reasonably necessary to protect our rights, website, or users.
+          </p>
+
+
+          <h2>5. Cookies and Analytics</h2>
+
+          <p>
+            This website may use cookies or similar technologies that are
+            necessary for its operation.
+          </p>
+
+          <p>
+            If analytics or other tracking services are used, they may
+            collect information such as your IP address, browser type,
+            device information, pages visited, and general website usage.
+          </p>
+
+          <p>
+            If no analytics, tracking, or non-essential cookies are used,
+            this section may be removed.
+          </p>
+
+
+          <h2>6. Third-Party Services</h2>
+
+          <p>
+            Certain aspects of this website may rely on third-party
+            services, such as website hosting, email, analytics, or
+            technical infrastructure.
+          </p>
+
+          <p>
+            These services may process information according to their own
+            privacy policies and terms.
+          </p>
+
+
+          <h2>7. Data Retention</h2>
+
+          <p>
+            Information received through correspondence is retained only
+            for as long as reasonably necessary to respond to inquiries,
+            maintain appropriate business records, or meet applicable
+            legal obligations.
+          </p>
+
+
+          <h2>8. Your Rights</h2>
+
+          <p>
+            Depending on where you live, you may have rights concerning
+            your personal information, including rights to request access,
+            correction, deletion, or information about how your personal
+            data is processed.
+          </p>
+
+          <p>
+            To make a privacy-related request, please use the contact link
+            below.
+          </p>
+
+
+          <h2>9. Children's Privacy</h2>
+
+          <p>
+            This website is not intentionally directed toward children,
+            and we do not knowingly collect personal information from
+            children through the website.
+          </p>
+
+
+          <h2>10. Changes to This Policy</h2>
+
+          <p>
+            This Privacy Policy may be updated from time to time. Any
+            changes will be reflected on this page together with an
+            updated "Last updated" date.
+          </p>
+
+
+          <h2>11. Contact</h2>
+
+          <p>
+            If you have questions about this Privacy Policy or how
+            information is handled, please use the link below.
+          </p>
+
+          <p>
+            <a href="mailto:info@mail.com">Contact</a>
+          </p>
+
+        </div>
+
+
+        <nav class="links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="mailto:info@mail.com">Get in touch</a>
+        </nav>
+
+      </section>
+    </main>
+
+    <footer>
+      Shaping Ideas © P 2025-2026
+    </footer>
+
+  </div>
+
+</body>
+</html>
