@@ -163,6 +163,18 @@
       color: var(--light);
     }
 
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+
+      transition: opacity 180ms ease;
+    }
+
+    footer a:hover {
+      opacity: 0.5;
+    }
+
     @media (max-width: 600px) {
 
       .page {
@@ -272,7 +284,6 @@
           <p>Confident by nature.</p>
         </div>
         
-
         <nav class="links" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -283,7 +294,8 @@
     </main>
 
     <footer>
-      Shaping Ideas © Kerân Sam 2025-2026
+      Shaping Ideas © Kerân Sam 2025-2026 ·
+      <a href="privacy.html">Privacy</a>
     </footer>
 
   </div>
