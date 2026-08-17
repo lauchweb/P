@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Kerân Sam — Terms</title>
+
+  <meta
+    name="description"
+    content="Terms and conditions covering proposals, fees, working arrangements, and services provided by P."
+  >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --black: #111111;
+      --muted: #666666;
+      --light: #888888;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--black);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 42px 48px 28px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin-bottom: 48px;
+
+      font-size: clamp(56px, 7vw, 82px);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -0.055em;
+
+      color: var(--black);
+    }
+
+    .terms-text {
+      max-width: 650px;
+    }
+
+    .terms-text .updated {
+      margin-bottom: 42px;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+
+      color: var(--light);
+    }
+
+    .terms-text h2 {
+      margin-top: 44px;
+      margin-bottom: 18px;
+
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 500;
+      letter-spacing: -0.012em;
+
+      color: var(--black);
+    }
+
+    .terms-text h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .terms-text p {
+      margin-bottom: 28px;
+
+      font-size: 17px;
+      line-height: 1.72;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+
+      color: var(--muted);
+    }
+
+    .terms-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-text ul {
+      margin: -8px 0 28px;
+      padding-left: 22px;
+
+      color: var(--muted);
+    }
+
+    .terms-text li {
+      margin-bottom: 8px;
+
+      font-size: 17px;
+      line-height: 1.72;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+
+    .terms-text a {
+      color: var(--black);
+      text-decoration: none;
+
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 3px;
+
+      transition: opacity 180ms ease;
+    }
+
+    .terms-text a:hover {
+      opacity: 0.5;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-top: 52px;
+    }
+
+    .links a {
+      display: inline-block;
+
+      color: var(--black);
+      text-decoration: none;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 3px;
+
+      transition: opacity 180ms ease;
+    }
+
+    .links a:hover {
+      opacity: 0.5;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+
+      padding-top: 30px;
+
+      font-size: 12px;
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+
+      color: var(--light);
+    }
+
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+
+      transition: opacity 180ms ease;
+    }
+
+    footer a:hover {
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding: 28px 24px 22px;
+      }
+
+      .content {
+        padding: 60px 0;
+      }
+
+      h1 {
+        margin-bottom: 36px;
+
+        font-size: clamp(48px, 14vw, 68px);
+        line-height: 1;
+        letter-spacing: -0.06em;
+      }
+
+      .terms-text .updated {
+        margin-bottom: 34px;
+        font-size: 13px;
+      }
+
+      .terms-text h2 {
+        margin-top: 36px;
+        margin-bottom: 16px;
+
+        font-size: 17px;
+      }
+
+      .terms-text p {
+        margin-bottom: 24px;
+
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .terms-text ul {
+        margin-bottom: 24px;
+        padding-left: 20px;
+      }
+
+      .terms-text li {
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .links {
+        margin-top: 42px;
+        gap: 22px;
+      }
+
+      .links a {
+        font-size: 14px;
+      }
+
+      footer {
+        padding-top: 24px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .page {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <main>
+      <section class="content">
+
+        <h1>Terms</h1>
+
+        <div class="terms-text">
+
+          <p class="updated">
+            Last updated: August 17, 2026
+          </p>
+
+          <h2>1. About These Terms</h2>
+
+          <p>
+            These Terms describe the general conditions under which P
+            ("P," "I", "me", "my", "we," "us," or "our") provides
+            services.
+          </p>
+
+          <p>
+            They are intended to provide a general understanding of how
+            services are considered, proposed, accepted, and carried out.
+            The specific terms of an engagement are confirmed separately
+            in the applicable proposal, agreement, or other written
+            confirmation.
+          </p>
+
+          <h2>2. Selective Engagements</h2>
+
+          <p>
+            P accepts a limited number of engagements each year. Every
+            request is considered individually based on factors including
+            the nature of the work, timing, scope, availability, and
+            whether the engagement is an appropriate fit.
+          </p>
+
+          <p>
+            Contacting P does not create an obligation to work together.
+            P may decline a request at its discretion and is not required
+            to accept every inquiry or provide a reason for declining.
+          </p>
+
+          <h2>3. Proposals and Quotes</h2>
+
+          <p>
+            Initial inquiries, discussions, and proposals may be provided
+            without charge unless otherwise agreed.
+          </p>
+
+          <p>
+            A proposal or quote describes a potential engagement and does
+            not itself create an obligation to begin work. An engagement
+            becomes confirmed only when the applicable terms have been
+            accepted and the required payment has been received.
+          </p>
+
+          <h2>4. Fees and Payment</h2>
+
+          <p>
+            Unless otherwise agreed in writing, fees are payable in full
+            before work begins.
+          </p>
+
+          <p>
+            P does not begin an engagement until the agreed payment has
+            been received. Payment confirms the reservation of the agreed
+            engagement and the associated availability.
+          </p>
+
+          <h2>5. Minimum Engagements</h2>
+
+          <p>
+            Depending on the nature, complexity, and objectives of the
+            work, a minimum engagement period may apply.
+          </p>
+
+          <p>
+            A minimum period may be three months, six months, or another
+            period specified in the proposal or agreement. Minimum periods
+            allow sufficient time to understand the circumstances, develop
+            an informed approach, carry out the work, and properly assess
+            its progress.
+          </p>
+
+          <h2>6. Scope of Work</h2>
+
+          <p>
+            The scope, objectives, deliverables, timing, fees, and other
+            relevant conditions of each engagement are agreed before work
+            begins.
+          </p>
+
+          <p>
+            Work outside the agreed scope may require a separate agreement,
+            additional fee, or adjustment to the engagement period.
+          </p>
+
+          <h2>7. Client Responsibilities</h2>
+
+          <p>
+            The quality and progress of work may depend on the timely
+            provision of information, access, decisions, feedback, and
+            cooperation from the client.
+          </p>
+
+          <p>
+            P is not responsible for delays or limitations caused by
+            information, decisions, materials, approvals, or access that
+            are not provided when reasonably required.
+          </p>
+
+          <h2>8. Nature of the Work</h2>
+
+          <p>
+            Services involve professional judgement, recommendations,
+            analysis, and creative or strategic direction. While the work
+            is intended to provide meaningful value, P does not guarantee
+            a particular commercial, financial, market, or business result.
+          </p>
+
+          <h2>9. Confidentiality</h2>
+
+          <p>
+            Information shared in confidence during an engagement will be
+            treated as confidential, subject to applicable law and any
+            specific confidentiality agreement between the parties.
+          </p>
+
+          <h2>10. Intellectual Property</h2>
+
+          <p>
+            Ownership and permitted use of work created during an
+            engagement will be determined by the applicable proposal,
+            agreement, or written terms between P and the client.
+          </p>
+
+          <p>
+            Unless otherwise agreed, pre-existing methods, knowledge,
+            concepts, frameworks, tools, and materials remain the property
+            of the party that originally created them.
+          </p>
+
+          <h2>11. Ending an Engagement</h2>
+
+          <p>
+            The conditions for ending an engagement, including any notice
+            period, minimum commitment, outstanding fees, or other
+            obligations, will be specified in the applicable proposal or
+            agreement.
+          </p>
+
+          <h2>12. Changes to These Terms</h2>
+
+          <p>
+            These Terms may be updated from time to time. The version
+            published on this website reflects the general terms currently
+            applicable to new engagements.
+          </p>
+
+          <p>
+            The terms specifically agreed with a client in a signed
+            agreement, accepted proposal, or other written engagement
+            document will govern that engagement where they differ from
+            these general Terms.
+          </p>
+
+          <h2>13. Contact</h2>
+
+          <p>
+            <a href="mailto:terms@keransam.me">Contact us</a> if you have
+            questions about these Terms or the process.
+          </p>
+
+        </div>
+
+        <nav class="links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="mailto:help@keransam.me">Get in touch</a>
+        </nav>
+
+      </section>
+    </main>
+
+    <footer>
+      Shaping Ideas © Kerân Sam 2025-2026 ·
+      <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
