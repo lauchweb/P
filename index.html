@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>P</title>
+
+  <meta
+    name="description"
+    content="P"
+  >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --black: #111111;
+      --light: #888888;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--black);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 42px 48px 28px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home {
+      width: 100%;
+      max-width: 880px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 60px 0;
+    }
+
+    /* Name */
+
+    .name {
+      color: var(--black);
+      text-decoration: none;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+    }
+
+    /* Main composition */
+
+    .composition {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 34px;
+
+      margin-top: 72px;
+      margin-bottom: 72px;
+    }
+
+    /* Photograph */
+
+    .image {
+      display: block;
+
+      width: min(300px, 46vw);
+      height: auto;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      background: #f4f4f4;
+    }
+
+    /* Links */
+
+    .section-link {
+      color: var(--black);
+      text-decoration: none;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 3px;
+
+      transition: opacity 180ms ease;
+    }
+
+    .section-link:hover {
+      opacity: 0.5;
+    }
+
+    /* Footer */
+
+    footer {
+      width: 100%;
+      text-align: center;
+
+      padding-top: 30px;
+
+      font-size: 12px;
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+
+      color: var(--light);
+    }
+
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+
+      transition: opacity 180ms ease;
+    }
+
+    footer a:hover {
+      opacity: 0.5;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding: 28px 24px 22px;
+      }
+
+      .home {
+        padding: 40px 0;
+      }
+
+      .composition {
+        gap: 22px;
+
+        margin-top: 58px;
+        margin-bottom: 58px;
+      }
+
+      .image {
+        width: min(230px, 56vw);
+      }
+
+      .section-link {
+        font-size: 13px;
+      }
+
+      footer {
+        padding-top: 24px;
+      }
+    }
+
+    /* Very small screens */
+
+    @media (max-width: 380px) {
+
+      .page {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .composition {
+        gap: 16px;
+      }
+
+      .image {
+        width: 54vw;
+      }
+
+      .section-link {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <main>
+
+      <section class="home">
+
+        <a
+          class="name"
+          href="index.html"
+          aria-label="Home"
+        >
+          P
+        </a>
+
+        <div class="composition">
+
+          <a
+            class="section-link"
+            href="art.html"
+          >
+            Make
+          </a>
+
+          <img
+            class="image"
+            src="home-image.jpg"
+            alt=""
+          >
+
+          <a
+            class="section-link"
+            href="consulting.html"
+          >
+            Shape
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      P © 2025-2026 ·
+      <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
