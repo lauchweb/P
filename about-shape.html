@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Kerân Sam - About</title>
+  <title>About — SHAPE MATTER</title>
 
   <meta
     name="description"
-    content="A considered approach to products, services, and client experiences."
+    content="An approach to product and experience shaped by close observation, clarity, detail, and a strong sense of what belongs."
   >
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,15 +120,21 @@
       margin-bottom: 0;
     }
 
-    .links {
+    /* Menu */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav {
       display: flex;
       align-items: center;
       gap: 28px;
-      flex-wrap: wrap;
-      margin-top: 52px;
     }
 
-    .links a {
+    nav a {
       display: inline-block;
 
       color: var(--black);
@@ -145,13 +151,16 @@
       transition: opacity 180ms ease;
     }
 
-    .links a:hover {
+    nav a:hover {
       opacity: 0.5;
     }
 
+    /* Footer */
     footer {
       width: 100%;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       padding-top: 30px;
 
@@ -175,6 +184,7 @@
       opacity: 0.5;
     }
 
+    /* Tablet / mobile */
     @media (max-width: 600px) {
 
       .page {
@@ -209,20 +219,28 @@
         line-height: 1.45;
       }
 
-      .links {
-        margin-top: 42px;
-        gap: 22px;
+      header {
+        justify-content: flex-start;
       }
 
-      .links a {
-        font-size: 14px;
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 13px;
       }
 
       footer {
         padding-top: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
       }
     }
 
+    /* Very small screens */
     @media (max-width: 380px) {
 
       .page {
@@ -233,6 +251,10 @@
       h1 {
         font-size: 46px;
       }
+
+      nav {
+        gap: 14px;
+      }
     }
   </style>
 </head>
@@ -241,6 +263,7 @@
 
   <div class="page">
 
+    <!-- Main content -->
     <main>
       <section class="content">
 
@@ -256,7 +279,7 @@
 
           <p>
             A background rooted in product, together with a strong sense of
-            vision and aesthetic, informs an approach to physical and digital
+            vision and aesthetics, informs an approach to physical and digital
             products, services, and experiences. The work is about understanding
             what something is trying to achieve, what belongs, what does not,
             and how each part contributes to the whole.
@@ -266,16 +289,15 @@
             Creating something people want to own, use, and live with is about
             more than the object itself. It is about the quality of everything
             surrounding it — how it is presented, received, used, and
-            remembered. Product and client experience are considered together,
-            because each shapes the other.
+            remembered. The product and the experience around it are considered
+            together, because each shapes the other.
           </p>
 
           <p>
             Immersion in the subject is essential: understanding the context,
-            the materials, the details, the people, and the intentions that
-            give something its character. This creates the basis for decisions
-            made with clarity, from the product itself through to the
-            experience around it.
+            the materials, the details, and the intentions that give something
+            its character. This creates the basis for decisions made with
+            clarity, from the product itself through to the experience around it.
           </p>
 
         </div>
@@ -285,19 +307,33 @@
           <p>The experience is the journey.</p>
         </div>
 
-        <nav class="links" aria-label="Main navigation">
-          <a href="shape.html">Shape</a>
-          <a href="philosophy.html">Philosophy</a>
-          <a href="mailto:shape@keransam.com">Get in touch</a>
-        </nav>
-
       </section>
     </main>
 
+    <!-- Menu -->
+    <header>
+
+      <nav aria-label="Main navigation">
+        <a href="shape.html">Home</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </header>
+
+    <!-- Footer -->
     <footer>
-      Shaping Ideas © Kerân Sam 2025-2026 ·
-      <a href="privacy.html">Privacy</a> ·
-      <a href="terms.html">Terms</a>
+
+      <span>
+        SHAPE MATTER © 2026
+      </span>
+
+      <span>
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="terms.html">Terms</a>
+      </span>
+
     </footer>
 
   </div>
