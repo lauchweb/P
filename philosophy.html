@@ -1,13 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
 
-  <title>Kerân Sam — Philosophy</title>
+  <title>Philosophy — SHAPE MATTER</title>
 
   <meta
     name="description"
-    content="A considered philosophy of products, services, experiences, and the details that shape them."
+    content="A philosophy of thoughtful products and experiences, shaped through understanding, simplicity, authenticity, and attention to detail."
   >
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,15 +121,21 @@
       margin-bottom: 0;
     }
 
-    .links {
+    /* Menu */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav {
       display: flex;
       align-items: center;
       gap: 28px;
-      flex-wrap: wrap;
-      margin-top: 52px;
     }
 
-    .links a {
+    nav a {
       display: inline-block;
 
       color: var(--black);
@@ -145,13 +152,16 @@
       transition: opacity 180ms ease;
     }
 
-    .links a:hover {
+    nav a:hover {
       opacity: 0.5;
     }
 
+    /* Footer */
     footer {
       width: 100%;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       padding-top: 30px;
 
@@ -175,6 +185,7 @@
       opacity: 0.5;
     }
 
+    /* Tablet / mobile */
     @media (max-width: 600px) {
 
       .page {
@@ -209,20 +220,28 @@
         line-height: 1.45;
       }
 
-      .links {
-        margin-top: 42px;
-        gap: 22px;
+      header {
+        justify-content: flex-start;
       }
 
-      .links a {
-        font-size: 14px;
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 13px;
       }
 
       footer {
         padding-top: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
       }
     }
 
+    /* Very small screens */
     @media (max-width: 380px) {
 
       .page {
@@ -233,6 +252,10 @@
       h1 {
         font-size: 46px;
       }
+
+      nav {
+        gap: 14px;
+      }
     }
   </style>
 </head>
@@ -241,6 +264,7 @@
 
   <div class="page">
 
+    <!-- Main content -->
     <main>
       <section class="content">
 
@@ -263,10 +287,10 @@
           </p>
 
           <p>
-            Products, services, and experiences are closely connected. The
-            way something is made influences how it is presented, received,
-            used, and remembered. The experience around a product can be as
-            important to its character as the product itself.
+            Products, services, and experiences are closely connected. The way
+            something is made influences how it is presented, received, used,
+            and remembered. The experience around a product can be as important
+            to its character as the product itself.
           </p>
 
           <p>
@@ -277,26 +301,47 @@
             and true to what it is.
           </p>
 
+          <p>
+            We regularly reach out to organisations whose products or
+            experiences make us curious. Sometimes that leads to a project.
+            Sometimes it simply leads to a conversation and a better
+            understanding of why things are the way they are.
+          </p>
+
         </div>
 
         <div class="statement">
           <p>Considered by approach.</p>
           <p>Confident by nature.</p>
         </div>
-        
-        <nav class="links" aria-label="Main navigation">
-          <a href="shape.html">Shape</a>
-          <a href="about-shape.html">About</a>
-          <a href="mailto:shape@keransam.me">Get in touch</a>
-        </nav>
 
       </section>
     </main>
 
+    <!-- Menu -->
+    <header>
+
+      <nav aria-label="Main navigation">
+        <a href="shape.html">Home</a>
+        <a href="about-shape.html">About</a>
+        <a href="mailto:contact@shape.com">Get in touch</a>
+      </nav>
+
+    </header>
+
+    <!-- Footer -->
     <footer>
-      Shaping Ideas © Kerân Sam 2025-2026 ·
-      <a href="privacy.html">Privacy</a> ·
-      <a href="terms.html">Terms</a>
+
+      <span>
+        SHAPE MATTER © 2026
+      </span>
+
+      <span>
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="terms.html">Terms</a>
+      </span>
+
     </footer>
 
   </div>
