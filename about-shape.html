@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Arbre Nuage is an address for bespoke clothing, accessories, materials and objects made slowly, considered carefully and meant to be lived with."
+    content="A place for considered clothing, objects, materials, conversations and the quiet pleasures of making, travelling and living well."
   >
 
   <meta name="author" content="Arbre Nuage">
@@ -39,7 +39,7 @@
         Arial,
         sans-serif;
 
-      --pad: clamp(21px, 3.4vw, 52px);
+      --pad: clamp(22px, 4vw, 62px);
     }
 
     * {
@@ -61,16 +61,16 @@
       text-rendering: optimizeLegibility;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
 
@@ -88,8 +88,8 @@
       width: 100%;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
 
       padding: 21px var(--pad);
 
@@ -138,298 +138,31 @@
 
 
     /* =========================================================
-       HERO
+       LETTER INTRODUCTION
        ========================================================= */
 
-    .hero {
-      min-height: 100svh;
+    .letter-intro {
+      max-width: 1120px;
+
+      margin: 0 auto;
 
       padding:
-        82px
+        clamp(125px, 15vw, 210px)
         var(--pad)
-        34px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+        75px;
     }
 
-    .hero-top {
+    .letter-meta {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
 
-      font-family: var(--sans);
-      font-size: 10px;
-      line-height: 1.3;
-      letter-spacing: .06em;
-      text-transform: uppercase;
+      padding-bottom: 18px;
 
-      color: var(--muted);
-    }
-
-    .hero-top span:last-child {
-      text-align: right;
-    }
-
-    .hero-image {
-      height: min(68vh, 820px);
-
-      overflow: hidden;
-
-      margin-top: 25px;
-    }
-
-    .hero-image img {
-      object-position: center;
-    }
-
-    .hero-bottom {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 260px;
-
-      gap: 50px;
-
-      align-items: end;
-
-      padding-top: 28px;
-    }
-
-    .hero-title {
-      margin: 0;
-
-      font-family: var(--serif);
-      font-size: clamp(64px, 10.5vw, 165px);
-      font-weight: 400;
-      line-height: .76;
-      letter-spacing: -.065em;
-    }
-
-    .hero-note {
-      max-width: 245px;
-
-      font-family: var(--serif);
-      font-size: 21px;
-      line-height: 1.08;
-    }
-
-
-    /* =========================================================
-       THE ADDRESS
-       ========================================================= */
-
-    .address {
-      min-height: 100svh;
-
-      padding:
-        19vh
-        var(--pad)
-        20vh;
-
-      display: grid;
-      grid-template-columns: .78fr 1.22fr;
-
-      gap: 11vw;
-
-      align-items: center;
-    }
-
-    .address-image {
-      height: 69vh;
-    }
-
-    .address-copy {
-      max-width: 760px;
-    }
-
-    .address-copy p {
-      margin: 0 0 39px;
-
-      font-family: var(--serif);
-      font-size: clamp(32px, 4.15vw, 61px);
-      line-height: 1.025;
-      letter-spacing: -.027em;
-    }
-
-    .address-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .quiet-line {
-      margin-top: 65px !important;
-
-      max-width: 570px;
-
-      font-size: clamp(23px, 2.6vw, 37px) !important;
-      line-height: 1.12 !important;
-
-      color: var(--muted);
-    }
-
-
-    /* =========================================================
-       THE PEOPLE
-       ========================================================= */
-
-    .people {
-      padding:
-        6vh
-        var(--pad)
-        25vh;
-    }
-
-    .people-inner {
-      max-width: 1050px;
-
-      margin-left: 9%;
-    }
-
-    .people-label {
-      margin-bottom: 65px;
+      border-bottom: 1px solid var(--line);
 
       font-family: var(--sans);
       font-size: 10px;
-      line-height: 1.3;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-
-      color: var(--muted);
-    }
-
-    .people p {
-      margin: 0 0 48px;
-
-      max-width: 900px;
-
-      font-family: var(--serif);
-      font-size: clamp(34px, 4.6vw, 69px);
-      line-height: 1.01;
-      letter-spacing: -.038em;
-    }
-
-    .people p.offset {
-      margin-left: 13%;
-    }
-
-    .people p.small {
-      max-width: 620px;
-
-      margin-top: 80px;
-
-      font-size: clamp(24px, 2.8vw, 39px);
-      line-height: 1.09;
-    }
-
-
-    /* =========================================================
-       APPOINTMENT
-       ========================================================= */
-
-    .appointment {
-      padding:
-        0
-        var(--pad)
-        27vh;
-    }
-
-    .appointment-grid {
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-
-      gap: 10vw;
-
-      align-items: center;
-    }
-
-    .appointment-image {
-      height: 80vh;
-    }
-
-    .appointment-copy {
-      max-width: 540px;
-    }
-
-    .appointment-copy .label {
-      margin-bottom: 55px;
-
-      font-family: var(--sans);
-      font-size: 10px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-
-      color: var(--muted);
-    }
-
-    .appointment-copy p {
-      margin: 0 0 31px;
-
-      font-family: var(--serif);
-      font-size: clamp(29px, 3.35vw, 48px);
-      line-height: 1.055;
-      letter-spacing: -.018em;
-    }
-
-    .appointment-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    /* =========================================================
-       MATERIALS
-       ========================================================= */
-
-    .materials {
-      padding:
-        0
-        var(--pad)
-        28vh;
-    }
-
-    .materials-intro {
-      max-width: 720px;
-
-      margin:
-        0 0 90px
-        13%;
-
-      font-family: var(--serif);
-      font-size: clamp(29px, 3.5vw, 51px);
-      line-height: 1.04;
-      letter-spacing: -.025em;
-    }
-
-    .materials-large {
-      width: 72%;
-      height: 83vh;
-
-      margin-left: auto;
-    }
-
-    .materials-small {
-      width: 37%;
-      height: 52vh;
-
-      margin:
-        -16vh
-        0
-        0
-        7%;
-
-      position: relative;
-      z-index: 2;
-    }
-
-    .materials-caption {
-      width: 37%;
-
-      margin:
-        21px
-        0
-        0
-        7%;
-
-      font-family: var(--sans);
-      font-size: 9px;
       line-height: 1.35;
       letter-spacing: .06em;
       text-transform: uppercase;
@@ -437,229 +170,164 @@
       color: var(--muted);
     }
 
-
-    /* =========================================================
-       TIME
-       ========================================================= */
-
-    .time {
-      min-height: 100svh;
-
-      padding:
-        16vh
-        var(--pad)
-        22vh;
-
-      display: flex;
-      align-items: center;
-    }
-
-    .time-inner {
-      width: 100%;
-
-      display: grid;
-      grid-template-columns: 1fr .72fr;
-
-      gap: 12vw;
-
-      align-items: center;
-    }
-
-    .time-heading {
-      font-family: var(--serif);
-      font-size: clamp(78px, 12vw, 182px);
-      line-height: .73;
-      letter-spacing: -.065em;
-    }
-
-    .time-copy {
-      max-width: 510px;
-
-      font-family: var(--serif);
-      font-size: clamp(27px, 3.05vw, 43px);
-      line-height: 1.06;
-      letter-spacing: -.018em;
+    .letter-meta span:last-child {
+      text-align: right;
     }
 
 
     /* =========================================================
-       LIVED WITH
+       LETTER
        ========================================================= */
 
-    .lived {
+    .letter {
+      max-width: 920px;
+
+      margin: 0 auto;
+
       padding:
+        0 var(--pad)
+        clamp(130px, 17vw, 230px);
+    }
+
+    .salutation {
+      margin:
         0
-        var(--pad)
-        28vh;
-    }
-
-    .lived-grid {
-      display: grid;
-
-      grid-template-columns: .9fr 1.1fr;
-
-      gap: 10vw;
-
-      align-items: end;
-    }
-
-    .lived-image {
-      height: 78vh;
-    }
-
-    .lived-copy {
-      max-width: 620px;
-
-      padding-bottom: 7vh;
-    }
-
-    .lived-copy p {
-      margin: 0 0 39px;
+        0
+        75px;
 
       font-family: var(--serif);
-      font-size: clamp(28px, 3.3vw, 47px);
-      line-height: 1.055;
-      letter-spacing: -.02em;
+      font-size: clamp(25px, 2.5vw, 35px);
+      line-height: 1.15;
     }
 
-    .lived-copy .muted {
+    .letter p {
+      margin:
+        0
+        0
+        43px;
+
+      font-family: var(--serif);
+      font-size: clamp(25px, 2.8vw, 39px);
+      line-height: 1.17;
+      letter-spacing: -.012em;
+    }
+
+    .letter p.indent {
+      margin-left: 12%;
+    }
+
+    .letter p.small {
+      max-width: 680px;
+
+      font-size: clamp(21px, 2.25vw, 31px);
+      line-height: 1.22;
+    }
+
+    .letter p.quiet {
+      color: var(--muted);
+    }
+
+    .letter p.break {
+      margin-top: 100px;
+    }
+
+
+    /* =========================================================
+       PHOTOGRAPHS
+       ========================================================= */
+
+    .photograph {
+      width: min(760px, 88vw);
+      height: min(760px, 72vw);
+
+      margin:
+        55px
+        0
+        105px
+        11%;
+    }
+
+    .photograph img {
+      object-position: center;
+    }
+
+    .caption {
+      margin-top: 12px;
+
+      font-family: var(--sans);
+      font-size: 9px;
+      line-height: 1.35;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    .side-photo {
+      width: 47%;
+      height: 570px;
+
+      margin:
+        95px
+        0
+        110px
+        45%;
+    }
+
+
+    /* =========================================================
+       LETTER ASIDE
+       ========================================================= */
+
+    .aside {
+      max-width: 430px;
+
+      margin:
+        115px
+        0
+        120px
+        27%;
+
+      font-family: var(--serif);
+      font-size: clamp(21px, 2.2vw, 30px);
+      line-height: 1.17;
+
       color: var(--muted);
     }
 
 
     /* =========================================================
-       WORLD
+       CLOSING
        ========================================================= */
 
-    .world {
+    .closing {
+      max-width: 920px;
+
+      margin: 0 auto;
+
       padding:
-        0
-        var(--pad)
-        28vh;
+        0 var(--pad)
+        22vh;
     }
 
-    .world-intro {
-      max-width: 850px;
+    .closing p {
+      max-width: 700px;
 
       margin:
         0
         0
-        13vh
-        10%;
+        45px;
 
       font-family: var(--serif);
-      font-size: clamp(43px, 6vw, 88px);
-      line-height: .89;
-      letter-spacing: -.045em;
+      font-size: clamp(26px, 3vw, 42px);
+      line-height: 1.14;
     }
 
-    .world-grid {
-      display: grid;
-
-      grid-template-columns: .78fr 1.22fr;
-
-      gap: 24px;
-
-      align-items: end;
-    }
-
-    .world-one {
-      height: 65vh;
-    }
-
-    .world-two {
-      height: 88vh;
-    }
-
-    .world-caption {
-      max-width: 460px;
-
-      margin:
-        24px
-        0
-        0
-        auto;
+    .signature {
+      margin-top: 75px;
 
       font-family: var(--serif);
-      font-size: 23px;
-      line-height: 1.08;
-    }
-
-
-    /* =========================================================
-       ARBRE NUAGE
-       ========================================================= */
-
-    .name {
-      min-height: 100svh;
-
-      padding:
-        15vh
-        var(--pad)
-        19vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-    }
-
-    .name-inner {
-      max-width: 1080px;
-    }
-
-    .name-title {
-      margin: 0 0 70px;
-
-      font-family: var(--serif);
-      font-size: clamp(75px, 12vw, 180px);
-      font-weight: 400;
-      line-height: .76;
-      letter-spacing: -.07em;
-    }
-
-    .name-copy {
-      max-width: 680px;
-
-      margin: auto;
-
-      font-family: var(--serif);
-      font-size: clamp(25px, 3vw, 42px);
-      line-height: 1.07;
-    }
-
-
-    /* =========================================================
-       FINAL IMAGE / BREATH
-       ========================================================= */
-
-    .breath {
-      padding:
-        0
-        var(--pad)
-        24vh;
-    }
-
-    .breath-image {
-      width: 100%;
-      height: 76vh;
-    }
-
-    .breath-line {
-      max-width: 850px;
-
-      margin:
-        70px
-        auto
-        0;
-
-      text-align: center;
-
-      font-family: var(--serif);
-      font-size: clamp(38px, 5.5vw, 79px);
-      line-height: .91;
-      letter-spacing: -.05em;
+      font-size: 27px;
     }
 
 
@@ -669,9 +337,9 @@
 
     footer {
       padding:
-        72px
+        70px
         var(--pad)
-        28px;
+        27px;
 
       border-top: 1px solid var(--line);
     }
@@ -693,10 +361,6 @@
       gap: 18px;
     }
 
-    .legal a {
-      transition: color .2s ease;
-    }
-
     .legal a:hover {
       color: var(--ink);
     }
@@ -708,7 +372,6 @@
 
     .reveal {
       opacity: 0;
-
       transform: scale(1.025);
 
       transition:
@@ -726,7 +389,7 @@
        MOBILE
        ========================================================= */
 
-    @media (max-width: 720px) {
+    @media (max-width: 700px) {
 
       :root {
         --pad: 20px;
@@ -740,239 +403,83 @@
         gap: 17px;
       }
 
-      .hero {
-        padding-top: 72px;
-        padding-bottom: 27px;
+      .letter-intro {
+        padding-top: 105px;
+        padding-bottom: 48px;
       }
 
-      .hero-top {
+      .letter-meta {
         font-size: 9px;
       }
 
-      .hero-image {
-        height: 63vh;
-        min-height: 420px;
+      .letter {
+        padding-bottom: 120px;
       }
 
-      .hero-bottom {
-        display: block;
-      }
-
-      .hero-title {
-        margin-top: 27px;
-        margin-bottom: 28px;
-
-        font-size: 67px;
-        line-height: .78;
-      }
-
-      .hero-note {
-        font-size: 20px;
-      }
-
-      .address {
-        display: block;
-
-        padding-top: 16vh;
-        padding-bottom: 20vh;
-      }
-
-      .address-image {
-        height: 62vh;
-        margin-bottom: 58px;
-      }
-
-      .address-copy p {
-        font-size: 31px;
-        line-height: 1.08;
-      }
-
-      .address-copy .quiet-line {
-        margin-top: 50px !important;
-        font-size: 23px !important;
-      }
-
-      .people {
-        padding-bottom: 20vh;
-      }
-
-      .people-inner {
-        margin-left: 0;
-      }
-
-      .people-label {
-        margin-bottom: 50px;
-      }
-
-      .people p {
-        font-size: 34px;
-        line-height: 1.08;
-      }
-
-      .people p.offset {
-        margin-left: 0;
-      }
-
-      .people p.small {
-        margin-top: 60px;
+      .salutation {
+        margin-bottom: 55px;
         font-size: 24px;
       }
 
-      .appointment {
-        padding-bottom: 21vh;
+      .letter p {
+        margin-bottom: 35px;
+
+        font-size: 25px;
+        line-height: 1.18;
       }
 
-      .appointment-grid {
-        display: block;
-      }
-
-      .appointment-image {
-        height: 63vh;
-        margin-bottom: 58px;
-      }
-
-      .appointment-copy .label {
-        margin-bottom: 45px;
-      }
-
-      .appointment-copy p {
-        font-size: 29px;
-      }
-
-      .materials {
-        padding-bottom: 22vh;
-      }
-
-      .materials-intro {
+      .letter p.indent {
         margin-left: 0;
-        margin-bottom: 60px;
-
-        font-size: 29px;
       }
 
-      .materials-large {
+      .letter p.small {
+        font-size: 21px;
+      }
+
+      .letter p.break {
+        margin-top: 60px;
+      }
+
+      .photograph {
         width: 100%;
-        height: 66vh;
-      }
-
-      .materials-small {
-        width: 70%;
-        height: 43vh;
+        height: 67vh;
 
         margin:
-          -10vh
+          55px
           0
+          75px;
+      }
+
+      .side-photo {
+        width: 75%;
+        height: 48vh;
+
+        margin:
+          70px
           0
-          5%;
+          80px
+          25%;
       }
 
-      .materials-caption {
-        width: 70%;
-        margin-left: 5%;
+      .aside {
+        margin:
+          80px
+          5%
+          85px;
+
+        font-size: 21px;
       }
 
-      .time {
-        min-height: 90svh;
-
-        padding-top: 12vh;
-        padding-bottom: 18vh;
+      .closing {
+        padding-bottom: 135px;
       }
 
-      .time-inner {
-        display: block;
+      .closing p {
+        font-size: 26px;
       }
 
-      .time-heading {
-        margin-bottom: 70px;
-
-        font-size: 82px;
-      }
-
-      .time-copy {
-        font-size: 27px;
-      }
-
-      .lived {
-        padding-bottom: 22vh;
-      }
-
-      .lived-grid {
-        display: block;
-      }
-
-      .lived-image {
-        height: 65vh;
-        margin-bottom: 55px;
-      }
-
-      .lived-copy {
-        padding-bottom: 0;
-      }
-
-      .lived-copy p {
-        font-size: 28px;
-      }
-
-      .world {
-        padding-bottom: 22vh;
-      }
-
-      .world-intro {
-        margin-left: 0;
-        margin-bottom: 70px;
-
-        font-size: 45px;
-      }
-
-      .world-grid {
-        display: block;
-      }
-
-      .world-one {
-        height: 57vh;
-        margin-bottom: 24px;
-      }
-
-      .world-two {
-        height: 67vh;
-      }
-
-      .world-caption {
-        margin-left: 0;
-
-        font-size: 22px;
-      }
-
-      .name {
-        min-height: 88svh;
-      }
-
-      .name-title {
-        margin-bottom: 55px;
-
-        font-size: 76px;
-      }
-
-      .name-copy {
+      .signature {
         font-size: 25px;
-      }
-
-      .breath {
-        padding-bottom: 19vh;
-      }
-
-      .breath-image {
-        height: 66vh;
-      }
-
-      .breath-line {
-        margin-top: 55px;
-
-        font-size: 39px;
-      }
-
-      footer {
-        padding-top: 65px;
       }
 
       .footer-line {
@@ -997,7 +504,7 @@
 
     <nav>
       <a href="/about">About</a>
-      <a href="/notes">Notes</a>
+      <a href="/letters">Letters</a>
     </nav>
 
   </header>
@@ -1007,47 +514,20 @@
 
 
     <!-- =======================================================
-         ARRIVAL
+         LETTER HEADING
          ======================================================= -->
 
-    <section class="hero">
+    <section class="letter-intro">
 
-      <div class="hero-top">
+      <div class="letter-meta">
 
         <span>
-          From somewhere in the world
+          A letter from somewhere in the world
         </span>
 
         <span>
-          An address<br>
-          worth finding
+          06 / 09 / 2026
         </span>
-
-      </div>
-
-
-      <div class="hero-image">
-
-        <img
-          class="reveal"
-          src="/images/hero.jpg"
-          alt="Arbre Nuage"
-        >
-
-      </div>
-
-
-      <div class="hero-bottom">
-
-        <h1 class="hero-title">
-          Arbre Nuage
-        </h1>
-
-        <div class="hero-note">
-          A place for things made slowly,
-          considered carefully,
-          and lived with for a long time.
-        </div>
 
       </div>
 
@@ -1055,399 +535,697 @@
 
 
     <!-- =======================================================
-         THE ADDRESS
+         THE LETTER
          ======================================================= -->
 
-    <section class="address">
+    <article class="letter">
 
-      <div class="address-image">
+
+      <p class="salutation">
+        To those who find their way here,
+      </p>
+
+
+      <p>
+        We have been trying to find the right way
+        to tell you what this is.
+      </p>
+
+      <p>
+        Not what it sells, exactly.
+        That part is easy enough.
+        There are clothes, accessories, objects,
+        materials, things made by hand and things
+        made with machines.
+      </p>
+
+      <p>
+        What is harder to explain is why we wanted
+        to make a place for them in the first place.
+      </p>
+
+      <p class="indent">
+        Perhaps it begins with the feeling of finding
+        a place that somebody did not make for everybody.
+      </p>
+
+      <p>
+        A place you hear about from another person.
+        An address written on a piece of paper.
+        A road you have never taken before.
+        A door that is not particularly remarkable
+        from the outside.
+      </p>
+
+
+      <div class="photograph">
 
         <img
           class="reveal"
           src="/images/address.jpg"
-          alt=""
+          alt="A quiet road leading somewhere"
+          loading="lazy"
+        >
+
+        <div class="caption">
+          Sometimes the road is part of the invitation.
+        </div>
+
+      </div>
+
+
+      <p>
+        You go because somebody you trust told you
+        that there was something worth seeing there.
+      </p>
+
+      <p>
+        Maybe they could not explain it very well.
+        Maybe that was part of the reason you went.
+      </p>
+
+      <p>
+        We have always liked those kinds of discoveries.
+      </p>
+
+      <p>
+        The things that are not presented to you all at once.
+        The good restaurant at the end of an unremarkable road.
+        The old house you notice only because somebody
+        points it out.
+        The person who knows exactly where to find
+        the right material.
+        The tree that has grown in a place where it seems
+        it should not be able to grow.
+      </p>
+
+      <p>
+        There is a particular pleasure in being let in
+        on something rather than being sold something.
+      </p>
+
+
+      <p class="break">
+        That is the kind of place we wanted to make.
+      </p>
+
+      <p>
+        Somewhere to come without having to know
+        exactly what you are looking for.
+      </p>
+
+      <p>
+        You might come because you heard about a coat.
+        You might come because you wanted to see
+        how something was made.
+        You might come because you were passing through.
+        You might come because somebody told you
+        there was a person here who knew about leather,
+        or cloth, or wood, or some strange material
+        you had never heard of before.
+      </p>
+
+      <p>
+        And you might leave without buying anything.
+      </p>
+
+      <p>
+        We are quite comfortable with that.
+      </p>
+
+
+      <div class="side-photo">
+
+        <img
+          class="reveal"
+          src="/images/workshop.jpg"
+          alt="Hands and materials on a work table"
           loading="lazy"
         >
 
       </div>
 
 
-      <div class="address-copy">
+      <p>
+        Because the conversation is part of it.
+      </p>
 
-        <p>
-          Sometimes an address
-          is not something you search for.
-        </p>
+      <p>
+        So is the looking.
+        So is touching something and turning it over
+        to see how it has been put together.
+      </p>
 
-        <p>
-          Someone gives it to you.
-        </p>
+      <p>
+        We like people who ask what something is made of.
+        People who notice a seam.
+        A button.
+        The weight of a fabric.
+        The way a pocket has been placed.
+        The way an object feels after it has been used
+        for a few years rather than five minutes.
+      </p>
 
-        <p>
-          They write it down,
-          tell you a little about the road,
-          and say you should go.
-        </p>
-
-        <p class="quiet-line">
-          This is that kind of place.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         PEOPLE
-         ======================================================= -->
-
-    <section class="people">
-
-      <div class="people-inner">
-
-        <div class="people-label">
-          For people who notice
-        </div>
-
-        <p>
-          For people who have travelled
-          without needing much.
-        </p>
-
-        <p class="offset">
-          Who have slept somewhere unfamiliar,
-          crossed a country by road,
-          spent an afternoon in a field,
-          or learned something useful
-          from someone they had just met.
-        </p>
-
-        <p>
-          People who recognise a good thing
-          before somebody has explained
-          why it is good.
-        </p>
-
-        <p class="small">
-          Curious about materials.
-          Curious about places.
-          Curious about people.
-          Comfortable with the simple things.
-        </p>
-
-      </div>
-
-    </section>
+      <p class="small">
+        Not because everything needs to be explained,
+        but because knowing how something came to exist
+        can change the way you look at it.
+      </p>
 
 
-    <!-- =======================================================
-         APPOINTMENT
-         ======================================================= -->
+      <p>
+        This is also why we spend so much time
+        with materials.
+      </p>
 
-    <section class="appointment">
+      <p>
+        Sometimes the right thing already exists.
+        Then the sensible thing is to find it,
+        understand it,
+        and leave it alone.
+      </p>
 
-      <div class="appointment-grid">
+      <p>
+        Sometimes it does not exist.
+      </p>
 
-        <div class="appointment-image">
-
-          <img
-            class="reveal"
-            src="/images/appointment.jpg"
-            alt=""
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="appointment-copy">
-
-          <div class="label">
-            By appointment
-          </div>
-
-          <p>
-            You come in.
-          </p>
-
-          <p>
-            We talk for a while.
-          </p>
-
-          <p>
-            There are things to look at
-            and things to touch.
-          </p>
-
-          <p>
-            You may leave with nothing.
-          </p>
-
-          <p>
-            That is perfectly fine.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
+      <p>
+        Then we have to make it.
+      </p>
 
 
-    <!-- =======================================================
-         MATERIALS
-         ======================================================= -->
-
-    <section class="materials">
-
-      <div class="materials-intro">
-
-        The beginning is usually
-        somewhere between a conversation
-        and a piece of material.
-
-      </div>
-
-
-      <div class="materials-large">
+      <div class="photograph">
 
         <img
           class="reveal"
           src="/images/materials-large.jpg"
-          alt="Material in the workshop"
+          alt="Materials being examined"
           loading="lazy"
         >
+
+        <div class="caption">
+          Before a thing has decided what it wants to become.
+        </div>
 
       </div>
 
 
-      <div class="materials-small">
+      <p>
+        This is where things can become rather slow.
+      </p>
+
+      <p>
+        A material behaves differently than expected.
+        A construction looks right on paper
+        and wrong when it is worn.
+        Something works perfectly except for one small thing
+        that becomes irritating every time you use it.
+      </p>
+
+      <p>
+        So we change it.
+      </p>
+
+      <p>
+        Then we make it again.
+      </p>
+
+      <p>
+        And sometimes we realise that the first version
+        was better after all.
+      </p>
+
+      <p class="quiet">
+        We do not think this is wasted time.
+      </p>
+
+      <p>
+        Time is part of the material too.
+      </p>
+
+
+      <p class="break">
+        We have become suspicious of the idea
+        that everything should happen quickly.
+      </p>
+
+      <p>
+        Quickly chosen.
+        Quickly made.
+        Quickly photographed.
+        Quickly replaced.
+      </p>
+
+      <p>
+        There are things for which speed is wonderful.
+        This does not have to be one of them.
+      </p>
+
+      <p>
+        Some ideas need to sit around for a while.
+        Some decisions become obvious only after
+        you have gone home.
+        Some materials need another attempt.
+        Some conversations are better continued
+        a month later.
+      </p>
+
+      <p>
+        We would rather leave room for that.
+      </p>
+
+
+      <div class="aside">
+        There is a difference between making something slowly
+        and simply making something inefficiently.
+        We are interested in the first.
+        The point is not slowness for its own sake.
+        The point is giving enough attention to know
+        when something is right.
+      </div>
+
+
+      <p>
+        And when something finally leaves,
+        we do not really think of the work as finished.
+      </p>
+
+      <p>
+        It goes with somebody.
+      </p>
+
+      <p>
+        It gets worn.
+        It gets packed into a bag.
+        It gets taken onto a train,
+        into a car,
+        through an airport,
+        into a house,
+        out into the rain.
+      </p>
+
+      <p>
+        Something gets spilled on it.
+        Something gets repaired.
+        A pocket becomes the pocket where somebody
+        always puts their keys.
+      </p>
+
+      <p>
+        Slowly, almost without noticing,
+        the thing stops being ours.
+      </p>
+
+      <p>
+        It becomes part of somebody else's life.
+      </p>
+
+
+      <div class="photograph">
 
         <img
           class="reveal"
-          src="/images/material-detail.jpg"
-          alt="Material detail"
+          src="/images/lived.jpg"
+          alt="A well-used object"
+          loading="lazy"
+        >
+
+        <div class="caption">
+          Things become interesting when they are used.
+        </div>
+
+      </div>
+
+
+      <p>
+        We like that very much.
+      </p>
+
+      <p>
+        We do not want to make things so precious
+        that they become afraid of being used.
+      </p>
+
+      <p>
+        If something needs repairing, bring it back.
+        If it needs changing because your life changed,
+        let us see what can be done.
+      </p>
+
+      <p>
+        We would much rather repair a good thing
+        than watch it disappear because of something small.
+      </p>
+
+      <p>
+        And the marks that cannot be repaired—
+        those are different.
+      </p>
+
+      <p>
+        We like those.
+      </p>
+
+      <p class="small">
+        Not artificial ageing.
+        Not things manufactured to look as though
+        they have travelled when they have not.
+        Just the quiet evidence that something
+        has actually been somewhere.
+      </p>
+
+
+      <div class="side-photo">
+
+        <img
+          class="reveal"
+          src="/images/patina.jpg"
+          alt="A worn material showing signs of use"
           loading="lazy"
         >
 
       </div>
 
 
-      <div class="materials-caption">
-        Materials are meant to be handled.
-      </div>
+      <p>
+        Perhaps that is also why the world around things
+        matters to us almost as much as the things themselves.
+      </p>
 
-    </section>
+      <p>
+        We like photographs that feel like photographs,
+        rather than advertisements pretending to be them.
+      </p>
 
+      <p>
+        Skin that looks like skin.
+        Light that has simply arrived.
+        A face that remains a face.
+        Good proportions.
+        A little imperfection left where it belongs.
+      </p>
 
-    <!-- =======================================================
-         TIME
-         ======================================================= -->
-
-    <section class="time">
-
-      <div class="time-inner">
-
-        <div class="time-heading">
-          No<br>
-          hurry.
-        </div>
-
-
-        <div class="time-copy">
-
-          Some ideas need a few days.
-
-          <br><br>
-
-          Some materials need another attempt.
-
-          <br><br>
-
-          Some decisions are better made
-          after you have gone home.
-
-          <br><br>
-
-          We let them.
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         LIVED WITH
-         ======================================================= -->
-
-    <section class="lived">
-
-      <div class="lived-grid">
-
-        <div class="lived-image">
-
-          <img
-            class="reveal"
-            src="/images/lived.jpg"
-            alt=""
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="lived-copy">
-
-          <p>
-            Eventually, something leaves
-            the workshop.
-          </p>
-
-          <p>
-            It goes with you.
-          </p>
-
-          <p>
-            Then it starts becoming yours.
-          </p>
-
-          <p class="muted">
-            Wear it.
-            Travel with it.
-            Mark it.
-            Repair it.
-            Change it when life changes.
-          </p>
-
-          <p>
-            We would like our things
-            to become better records of a life,
-            rather than things kept away from it.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         WORLD
-         ======================================================= -->
-
-    <section class="world">
-
-      <div class="world-intro">
-
-        We like being around things
-        that already know how to exist.
-
-      </div>
-
-
-      <div class="world-grid">
-
-        <div class="world-one">
-
-          <img
-            class="reveal"
-            src="/images/field.jpg"
-            alt="Field and vegetation"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="world-two">
-
-          <img
-            class="reveal"
-            src="/images/house.jpg"
-            alt="House surrounded by vegetation"
-            loading="lazy"
-          >
-
-        </div>
-
-      </div>
-
-
-      <div class="world-caption">
-
+      <p>
+        We like fields.
         Trees.
-        Plants.
-        Weather.
+        Endemic plants.
         Old houses.
         Roads.
-        Skin.
-        Light.
-        Things that do not need
-        to announce themselves.
+        Weather.
+        Walls that have changed colour over time.
+        Places where you can tell that people
+        have been living there for a very long time.
+      </p>
 
-      </div>
+      <p>
+        Things that do not need to announce themselves.
+      </p>
 
-    </section>
 
+      <div class="photograph">
 
-    <!-- =======================================================
-         THE NAME
-         ======================================================= -->
+        <img
+          class="reveal"
+          src="/images/field.jpg"
+          alt="Field and vegetation"
+          loading="lazy"
+        >
 
-    <section class="name">
-
-      <div class="name-inner">
-
-        <h2 class="name-title">
-          Arbre Nuage
-        </h2>
-
-        <div class="name-copy">
-
-          The tree, the cloud,
-          the rain that passes between them.
-
-          <br><br>
-
-          Some things are so fundamental
-          that we can almost forget
-          how much they give us.
-
+        <div class="caption">
+          The things around us are part of the picture too.
         </div>
 
       </div>
 
-    </section>
+
+      <p>
+        There is a place we keep imagining.
+      </p>
+
+      <p>
+        Not because we have decided exactly what it should be,
+        but because the image keeps returning.
+      </p>
+
+      <p>
+        A piece of land somewhere.
+        A house that already has a history.
+        Perhaps an old colonial house,
+        perhaps something much simpler.
+      </p>
+
+      <p>
+        Endemic plants around it.
+        Trees that were there before us.
+        A little weather.
+        A long table.
+        Materials.
+        Books.
+        Clothes.
+        Tools.
+        Somewhere to work.
+        Somewhere to sit.
+        Somewhere to have a conversation
+        that unexpectedly lasts three hours.
+      </p>
+
+      <p class="indent">
+        It could become a workshop.
+        It could become an office.
+        It could become something closer to a salon.
+        Or perhaps none of those words would be quite right.
+      </p>
+
+      <p>
+        The point is not the name.
+      </p>
+
+      <p>
+        The point is having somewhere that allows
+        all these things to exist together:
+        making,
+        thinking,
+        meeting,
+        travelling,
+        collecting,
+        learning,
+        and occasionally doing absolutely nothing.
+      </p>
 
 
-    <!-- =======================================================
-         BREATH
-         ======================================================= -->
+      <p class="break">
+        We imagine that the people who find this place
+        will probably have something in common.
+      </p>
 
-    <section class="breath">
+      <p>
+        Not a particular age.
+        Not a particular profession.
+        Not a particular way of dressing.
+      </p>
 
-      <div class="breath-image">
+      <p>
+        Something harder to describe.
+      </p>
+
+      <p>
+        They may have travelled with very little.
+        They may have crossed a country by car,
+        slept somewhere uncomfortable,
+        eaten somewhere they could not pronounce,
+        learned a useful thing from a stranger,
+        or changed their plans because somebody
+        told them about a road worth taking.
+      </p>
+
+      <p>
+        They may come from one place
+        and somehow belong to several.
+      </p>
+
+      <p>
+        They may speak several languages.
+        They may know how to spend an afternoon
+        doing nothing at all.
+      </p>
+
+      <p>
+        They may understand why a tree matters
+        without needing the explanation.
+      </p>
+
+      <p>
+        They may notice a beautiful object immediately,
+        and then want to turn it around
+        to understand why.
+      </p>
+
+      <p class="small">
+        Curious, but not restless.
+        Adventurous, but comfortable with very little.
+        Interested in the world without needing
+        to decorate themselves with it.
+      </p>
+
+
+      <p>
+        Those are the people we hope to meet.
+      </p>
+
+      <p>
+        Although perhaps the best thing is
+        that we would not know them from a description.
+      </p>
+
+      <p>
+        We would know them because the conversation
+        would probably continue longer than expected.
+      </p>
+
+      <p>
+        We would show them something.
+        They would tell us about something.
+        They would ask a question we had not thought of.
+        We would make some coffee.
+        Somebody would notice a material on the table.
+        And somehow an afternoon would disappear.
+      </p>
+
+
+      <div class="photograph">
 
         <img
           class="reveal"
-          src="/images/breath.jpg"
-          alt=""
+          src="/images/house.jpg"
+          alt="An old house surrounded by vegetation"
           loading="lazy"
         >
+
+        <div class="caption">
+          Somewhere between making a place and finding one.
+        </div>
 
       </div>
 
 
-      <div class="breath-line">
+      <p>
+        Maybe that is what we are really trying to build.
+      </p>
 
-        Somewhere in the middle
-        of this strange world,
-        a place to slow down.
+      <p>
+        Not simply a collection of things,
+        and not simply a place to buy them.
+      </p>
 
+      <p>
+        An address.
+      </p>
+
+      <p>
+        A point on the map where a certain kind of curiosity
+        can find other curiosity.
+      </p>
+
+      <p>
+        A place where a good object can sit beside
+        a piece of material,
+        beside a photograph,
+        beside a book,
+        beside a story from somewhere far away,
+        without any of them needing to explain
+        why they belong together.
+      </p>
+
+      <p>
+        A place where making something well
+        is enough of a reason.
+      </p>
+
+      <p>
+        A place where buying something is not
+        the only possible outcome of coming through the door.
+      </p>
+
+      <p>
+        A place where things can take the time
+        they actually require.
+      </p>
+
+
+      <p class="break">
+        We do not know exactly where all of this will lead.
+      </p>
+
+      <p>
+        That is perhaps the part we like most.
+      </p>
+
+      <p>
+        We are still looking for materials.
+        Still making mistakes.
+        Still finding people.
+        Still travelling.
+        Still changing our minds.
+        Still discovering that something we thought
+        was important was not,
+        and something we nearly ignored was.
+      </p>
+
+      <p>
+        There will be clothes.
+        There will be objects.
+        There will be photographs,
+        materials,
+        places,
+        conversations,
+        and probably a few things
+        we have not yet thought of.
+      </p>
+
+      <p>
+        We hope there will always be room for those.
+      </p>
+
+
+    </article>
+
+
+    <!-- =======================================================
+         CLOSING
+         ======================================================= -->
+
+    <section class="closing">
+
+      <p>
+        So, if somebody gives you this address,
+        come when you can.
+      </p>
+
+      <p>
+        You do not need to know what you are looking for.
+      </p>
+
+      <p>
+        Come and look around.
+        Ask questions.
+        Sit down.
+        Tell us where you have been.
+        Tell us what you have found.
+      </p>
+
+      <p>
+        Perhaps we will have something to show you.
+        Perhaps you will show us something instead.
+      </p>
+
+      <p>
+        Either way, we will be glad you came.
+      </p>
+
+      <div class="signature">
+        Until then,
+        <br><br>
+        Arbre Nuage
       </div>
 
     </section>
@@ -1467,7 +1245,6 @@
       <span>
         © <span id="year"></span> Arbre Nuage
       </span>
-
 
       <div class="legal">
 
