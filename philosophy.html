@@ -2,345 +2,1443 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Philosophy — SHAPE MATTER</title>
+  <title>Arbre Nuage — About</title>
 
   <meta
     name="description"
-    content="A philosophy of thoughtful products and experiences, shaped through understanding, simplicity, authenticity, and attention to detail."
+    content="Arbre Nuage is a place for things made with time, materials, curiosity and a life lived with them."
   >
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Arbre Nuage">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E8E1D5">
+
+  <link rel="canonical" href="https://arbrenuage.com/about">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <style>
     :root {
-      --black: #111111;
-      --muted: #666666;
-      --light: #888888;
-      --background: #ffffff;
-    }
+      --paper: #E8E1D5;
+      --ink: #252A24;
+      --muted: #686B63;
+      --line: rgba(37, 42, 36, 0.18);
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+      --serif:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      background: var(--background);
-      color: var(--black);
-
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
+      --sans:
+        "Helvetica Neue",
         Helvetica,
         Arial,
         sans-serif;
 
-      font-weight: 400;
+      --pad: clamp(20px, 3vw, 48px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--paper);
+      color: var(--ink);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      padding: 42px 48px 28px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-    }
-
-    .content {
+    img {
+      display: block;
       width: 100%;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 80px 0;
+      height: 100%;
+      object-fit: cover;
     }
 
-    h1 {
-      max-width: 800px;
-      margin-bottom: 48px;
 
-      font-size: clamp(56px, 7vw, 82px);
-      line-height: 0.98;
-      font-weight: 400;
-      letter-spacing: -0.055em;
+    /* =========================================================
+       HEADER
+       ========================================================= */
 
-      color: var(--black);
-    }
-
-    .about-text {
-      max-width: 650px;
-    }
-
-    .about-text p {
-      margin-bottom: 28px;
-
-      font-size: 17px;
-      line-height: 1.72;
-      font-weight: 400;
-      letter-spacing: -0.005em;
-
-      color: var(--muted);
-    }
-
-    .about-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    .statement {
-      margin-top: 28px;
-      max-width: 520px;
-    }
-
-    .statement p {
-      margin-bottom: 4px;
-
-      font-size: clamp(16px, 1.4vw, 18px);
-      line-height: 1.45;
-      font-weight: 400;
-      letter-spacing: -0.012em;
-
-      color: var(--black);
-    }
-
-    .statement p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Menu */
     header {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+
       width: 100%;
-      max-width: 880px;
-      margin: 0 auto;
 
       display: flex;
-      justify-content: flex-start;
       align-items: center;
+      justify-content: space-between;
+
+      padding: 22px var(--pad);
+
+      color: var(--ink);
+      mix-blend-mode: multiply;
+    }
+
+    .wordmark {
+      font-family: var(--sans);
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
     }
 
     nav {
       display: flex;
-      align-items: center;
       gap: 28px;
+
+      font-family: var(--sans);
+      font-size: 11px;
+      line-height: 1;
     }
 
     nav a {
-      display: inline-block;
-
-      color: var(--black);
-      text-decoration: none;
-
-      font-size: 14px;
-      line-height: 1.5;
-      font-weight: 500;
-      letter-spacing: -0.005em;
-
-      border-bottom: 1px solid var(--black);
-      padding-bottom: 3px;
-
-      transition: opacity 180ms ease;
+      position: relative;
     }
 
-    nav a:hover {
-      opacity: 0.5;
+    nav a::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+
+      width: 0;
+      height: 1px;
+
+      background: currentColor;
+
+      transition: width 300ms ease;
     }
 
-    /* Footer */
-    footer {
+    nav a:hover::after {
       width: 100%;
+    }
+
+
+    /* =========================================================
+       INTRODUCTION
+       ========================================================= */
+
+    .intro {
+      min-height: 100svh;
+
+      padding: 150px var(--pad) 100px;
+
+      display: grid;
+      grid-template-columns: 0.55fr 1.45fr;
+      gap: 10vw;
+
+      align-items: end;
+    }
+
+    .intro-label {
+      align-self: start;
+      padding-top: 8px;
+
+      font-family: var(--sans);
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .intro-text {
+      max-width: 1000px;
+    }
+
+    .intro-text h1 {
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(55px, 7.8vw, 120px);
+      font-weight: 400;
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+    }
+
+
+    /* =========================================================
+       LETTER
+       ========================================================= */
+
+    .letter {
+      padding: 15vh var(--pad) 25vh;
+    }
+
+    .letter-inner {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .letter p {
+      margin: 0 0 85px;
+
+      font-family: var(--serif);
+      font-size: clamp(29px, 3.65vw, 54px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .letter p.indent {
+      margin-left: 14%;
+    }
+
+    .letter p.small {
+      max-width: 690px;
+
+      font-size: clamp(24px, 2.7vw, 38px);
+      line-height: 1.12;
+    }
+
+    .letter p.last {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       NAME
+       ========================================================= */
+
+    .name {
+      min-height: 100svh;
+
+      padding: 15vh var(--pad);
+
+      display: flex;
+      align-items: center;
+    }
+
+    .name-inner {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 12vw;
+
+      align-items: center;
+    }
+
+    .name-image {
+      height: 76vh;
+    }
+
+    .name-copy {
+      max-width: 540px;
+    }
+
+    .name-copy .eyebrow {
+      margin-bottom: 40px;
+    }
+
+    .name-copy p {
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(29px, 3.5vw, 51px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+
+
+    /* =========================================================
+       TIME / MAKING
+       ========================================================= */
+
+    .making {
+      padding: 20vh var(--pad) 28vh;
+    }
+
+    .making-header {
+      max-width: 850px;
+
+      margin: 0 0 14vh 10%;
+    }
+
+    .making-header h2 {
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(49px, 6.5vw, 95px);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
+    .making-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 7vw;
+
+      align-items: start;
+    }
+
+    .making-image {
+      height: 75vh;
+    }
+
+    .making-copy {
+      max-width: 610px;
+      padding-top: 10vh;
+    }
+
+    .making-copy p {
+      margin: 0 0 43px;
+
+      font-family: var(--serif);
+      font-size: clamp(25px, 3vw, 42px);
+      line-height: 1.08;
+    }
+
+    .making-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       OBJECTS
+       ========================================================= */
+
+    .objects {
+      padding: 0 var(--pad) 28vh;
+    }
+
+    .objects-image {
+      width: 76%;
+      height: 88vh;
+    }
+
+    .objects-detail {
+      width: 39%;
+      height: 54vh;
+
+      margin: -15vh 0 0 auto;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .objects-copy {
+      width: 50%;
+
+      margin: 45px 0 0 8%;
+    }
+
+    .objects-copy p {
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(25px, 3vw, 42px);
+      line-height: 1.08;
+    }
+
+
+    /* =========================================================
+       AFTER
+       ========================================================= */
+
+    .after {
+      min-height: 100svh;
+
+      padding: 20vh var(--pad) 25vh;
+
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 12vw;
+
+      align-items: center;
+    }
+
+    .after-copy {
+      max-width: 680px;
+    }
+
+    .after-copy p {
+      margin: 0 0 48px;
+
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 51px);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .after-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .after-image {
+      height: 77vh;
+    }
+
+
+    /* =========================================================
+       PEOPLE
+       ========================================================= */
+
+    .people {
+      padding: 12vh var(--pad) 30vh;
+    }
+
+    .people-title {
+      max-width: 950px;
+
+      margin: 0 0 14vh 14%;
+
+      font-family: var(--serif);
+      font-size: clamp(48px, 6.8vw, 100px);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 9vw;
+
+      align-items: end;
+    }
+
+    .people-image {
+      height: 82vh;
+    }
+
+    .people-copy {
+      max-width: 520px;
+
+      padding-bottom: 8vh;
+    }
+
+    .people-copy p {
+      margin: 0 0 36px;
+
+      font-family: var(--serif);
+      font-size: clamp(24px, 2.8vw, 39px);
+      line-height: 1.1;
+    }
+
+    .people-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       NATURAL IMAGE / WORLD
+       ========================================================= */
+
+    .world {
+      padding: 0 var(--pad) 30vh;
+    }
+
+    .world-copy {
+      max-width: 800px;
+
+      margin: 0 auto 13vh;
+
+      text-align: center;
+    }
+
+    .world-copy p {
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.6vw, 67px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .world-image {
+      height: 91vh;
+    }
+
+    .world-note {
+      width: 42%;
+
+      margin: 28px 0 0 auto;
+
+      font-family: var(--serif);
+      font-size: 23px;
+      line-height: 1.1;
+    }
+
+
+    /* =========================================================
+       BELIEF
+       ========================================================= */
+
+    .belief {
+      min-height: 100svh;
+
+      padding: 18vh var(--pad) 28vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .belief p {
+      max-width: 1050px;
+
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(48px, 7vw, 105px);
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+    }
+
+
+    /* =========================================================
+       CLOSING LETTER
+       ========================================================= */
+
+    .closing {
+      padding: 10vh var(--pad) 30vh;
+    }
+
+    .closing-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .closing p {
+      margin: 0 0 60px;
+
+      font-family: var(--serif);
+      font-size: clamp(31px, 4vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+
+    .closing .signature {
+      font-family: var(--serif);
+      font-size: 28px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      padding: 80px var(--pad) 28px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-line {
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
+
+      font-family: var(--sans);
+      font-size: 10px;
+      line-height: 1.2;
+
+      color: var(--muted);
+    }
+
+    .legal {
+      display: flex;
       align-items: center;
-
-      padding-top: 30px;
-
-      font-size: 12px;
-      line-height: 1.5;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-
-      color: var(--light);
+      gap: 18px;
     }
 
-    footer a {
-      color: var(--light);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-
-      transition: opacity 180ms ease;
+    .legal a {
+      transition: color 200ms ease;
     }
 
-    footer a:hover {
-      opacity: 0.5;
+    .legal a:hover {
+      color: var(--ink);
     }
 
-    /* Tablet / mobile */
-    @media (max-width: 600px) {
 
-      .page {
-        padding: 28px 24px 22px;
-      }
+    /* =========================================================
+       IMAGE REVEAL
+       ========================================================= */
 
-      .content {
-        padding: 60px 0;
-      }
+    .reveal {
+      opacity: 0;
 
-      h1 {
-        margin-bottom: 36px;
+      transform: scale(1.025);
 
-        font-size: clamp(48px, 14vw, 68px);
-        line-height: 1;
-        letter-spacing: -0.06em;
-      }
+      transition:
+        opacity 1.5s ease,
+        transform 2.2s cubic-bezier(0.2, 0.6, 0.2, 1);
+    }
 
-      .about-text p {
-        margin-bottom: 24px;
+    .reveal.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
 
-        font-size: 15px;
-        line-height: 1.72;
-      }
 
-      .statement {
-        margin-top: 24px;
-      }
+    /* =========================================================
+       MOBILE
+       ========================================================= */
 
-      .statement p {
-        font-size: 16px;
-        line-height: 1.45;
+    @media (max-width: 720px) {
+
+      :root {
+        --pad: 20px;
       }
 
       header {
-        max-width: 880px;
-        justify-content: flex-start;
+        padding-top: 18px;
       }
 
       nav {
-        gap: 18px;
-        flex-wrap: wrap;
+        gap: 17px;
       }
 
-      nav a {
-        font-size: 13px;
-      }
+      .intro {
+        min-height: 100svh;
 
-      footer {
-        padding-top: 24px;
+        padding-top: 110px;
+        padding-bottom: 55px;
+
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-    }
-
-    /* Very small screens */
-    @media (max-width: 380px) {
-
-      .page {
-        padding-left: 20px;
-        padding-right: 20px;
+        justify-content: flex-end;
       }
 
-      h1 {
-        font-size: 46px;
+      .intro-label {
+        margin-bottom: auto;
       }
 
-      nav {
-        gap: 14px;
+      .intro-text h1 {
+        font-size: 58px;
+        line-height: 0.9;
+      }
+
+      .letter {
+        padding-top: 12vh;
+        padding-bottom: 20vh;
+      }
+
+      .letter p {
+        margin-bottom: 60px;
+
+        font-size: 29px;
+        line-height: 1.1;
+      }
+
+      .letter p.indent {
+        margin-left: 0;
+      }
+
+      .letter p.small {
+        font-size: 25px;
+      }
+
+      .name {
+        min-height: auto;
+
+        padding-top: 10vh;
+        padding-bottom: 20vh;
+      }
+
+      .name-inner {
+        display: block;
+      }
+
+      .name-image {
+        height: 66vh;
+        margin-bottom: 60px;
+      }
+
+      .name-copy p {
+        font-size: 29px;
+        line-height: 1.1;
+      }
+
+      .making {
+        padding-top: 10vh;
+        padding-bottom: 20vh;
+      }
+
+      .making-header {
+        margin: 0 0 75px;
+      }
+
+      .making-header h2 {
+        font-size: 50px;
+      }
+
+      .making-grid {
+        display: block;
+      }
+
+      .making-image {
+        height: 65vh;
+        margin-bottom: 60px;
+      }
+
+      .making-copy {
+        padding-top: 0;
+      }
+
+      .making-copy p {
+        font-size: 27px;
+        line-height: 1.1;
+      }
+
+      .objects {
+        padding-bottom: 20vh;
+      }
+
+      .objects-image {
+        width: 100%;
+        height: 68vh;
+      }
+
+      .objects-detail {
+        width: 67%;
+        height: 44vh;
+
+        margin-top: -10vh;
+        margin-right: 5%;
+      }
+
+      .objects-copy {
+        width: 85%;
+        margin-left: 5%;
+      }
+
+      .objects-copy p {
+        font-size: 27px;
+        line-height: 1.1;
+      }
+
+      .after {
+        min-height: auto;
+
+        padding-top: 10vh;
+        padding-bottom: 20vh;
+
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 60px;
+      }
+
+      .after-image {
+        height: 66vh;
+      }
+
+      .after-copy p {
+        font-size: 28px;
+        line-height: 1.1;
+      }
+
+      .people {
+        padding-bottom: 20vh;
+      }
+
+      .people-title {
+        margin-left: 0;
+        margin-bottom: 75px;
+
+        font-size: 50px;
+      }
+
+      .people-grid {
+        display: block;
+      }
+
+      .people-image {
+        height: 67vh;
+        margin-bottom: 60px;
+      }
+
+      .people-copy {
+        padding-bottom: 0;
+      }
+
+      .people-copy p {
+        font-size: 26px;
+        line-height: 1.1;
+      }
+
+      .world {
+        padding-bottom: 20vh;
+      }
+
+      .world-copy {
+        margin-bottom: 75px;
+      }
+
+      .world-copy p {
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .world-image {
+        height: 68vh;
+      }
+
+      .world-note {
+        width: 82%;
+        margin-left: 5%;
+
+        font-size: 21px;
+      }
+
+      .belief {
+        min-height: 85svh;
+
+        padding-top: 10vh;
+        padding-bottom: 20vh;
+      }
+
+      .belief p {
+        font-size: 48px;
+        line-height: 0.92;
+      }
+
+      .closing {
+        padding-bottom: 22vh;
+      }
+
+      .closing p {
+        font-size: 30px;
+        line-height: 1.08;
+      }
+
+      .closing .signature {
+        font-size: 25px;
+      }
+
+      .footer-line {
+        display: block;
+      }
+
+      .legal {
+        margin-top: 20px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-  <div class="page">
+  <header>
 
-    <!-- Main content -->
-    <main>
-      <section class="content">
+    <a href="/" class="wordmark">
+      Arbre Nuage
+    </a>
 
-        <h1>Philosophy</h1>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/notes">Notes</a>
+    </nav>
 
-        <div class="about-text">
+  </header>
+
+
+  <main>
+
+
+    <!-- =======================================================
+         INTRODUCTION
+         ======================================================= -->
+
+    <section class="intro">
+
+      <div class="intro-label">
+        About
+      </div>
+
+      <div class="intro-text">
+        <h1>
+          We believe some things
+          are better when they
+          are given time.
+        </h1>
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         LETTER
+         ======================================================= -->
+
+    <section class="letter">
+
+      <div class="letter-inner">
+
+        <p>
+          Arbre Nuage began with a simple feeling:
+          that there are things in life we should
+          experience properly.
+        </p>
+
+        <p class="indent">
+          Not quickly.
+          Not because they are available.
+          Not because someone told us we need them.
+        </p>
+
+        <p>
+          We wanted a place where an object could
+          take the time it needs to become itself.
+        </p>
+
+        <p class="small">
+          And where a person could take the time
+          to become part of that process too.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         THE NAME
+         ======================================================= -->
+
+    <section class="name">
+
+      <div class="name-inner">
+
+        <div class="name-image">
+          <img
+            class="reveal"
+            src="/images/tree-cloud.jpg"
+            alt="Tree and cloud"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="name-copy">
+
+          <div class="eyebrow">
+            The name
+          </div>
 
           <p>
-            Good work begins with understanding. The context, the purpose,
-            the people, and the details all matter. Clarity comes from looking
-            closely before deciding what needs to change, what belongs, and
-            what can be left alone.
+            Arbre Nuage means tree, cloud.
           </p>
 
-          <p>
-            Simplicity comes from knowing what is necessary. Each element
-            should have a reason to be there and contribute to the whole.
-            Detail matters when it adds meaning, function, or character;
-            otherwise, it can become unnecessary.
-          </p>
+          <br><br>
 
           <p>
-            Products, services, and experiences are closely connected. The way
-            something is made influences how it is presented, received, used,
-            and remembered. The experience around a product can be as important
-            to its character as the product itself.
+            The tree and the cloud are connected
+            in ways that are very simple and very deep.
           </p>
 
+          <br><br>
+
           <p>
-            Authenticity matters more than appearance. Clarity matters, and
-            nothing needs to be added simply for the sake of it. What feels
-            unclear, unnecessary, exaggerated, or inconsistent can be
-            questioned and refined until the whole feels natural, purposeful,
-            and true to what it is.
+            Things that give.
+            Things that receive.
+            Things that make life possible.
+          </p>
+
+          <br><br>
+
+          <p>
+            There are things we believe
+            we should not leave life without experiencing.
           </p>
 
         </div>
 
-        <div class="statement">
-          <p>Considered by approach.</p>
-          <p>Confident by nature.</p>
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         TIME / PROCESS
+         ======================================================= -->
+
+    <section class="making">
+
+      <div class="making-header">
+        <h2>
+          We don't make
+          things quickly.
+        </h2>
+      </div>
+
+      <div class="making-grid">
+
+        <div class="making-image">
+          <img
+            class="reveal"
+            src="/images/workshop.jpg"
+            alt="Workshop"
+            loading="lazy"
+          >
         </div>
 
-      </section>
-    </main>
+        <div class="making-copy">
 
-    <!-- Menu -->
-    <header>
+          <p>
+            You come by appointment.
+          </p>
 
-      <nav aria-label="Main navigation">
-        <a href="shape.html">Home</a>
-        <a href="about-shape.html">About</a>
-        <a href="mailto:contact@shape.mu">Get in touch</a>
-      </nav>
+          <p>
+            We talk.
+          </p>
 
-    </header>
+          <p>
+            You touch the materials.
+          </p>
 
-    <!-- Footer -->
-    <footer>
+          <p>
+            You tell us things about yourself.
+            Sometimes directly.
+            Sometimes without saying much.
+          </p>
+
+          <p>
+            Then you leave.
+          </p>
+
+          <p>
+            Maybe we meet again another day.
+          </p>
+
+          <p>
+            The piece may take months.
+          </p>
+
+          <p>
+            That is not a problem.
+            That is part of it.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         MATERIALS / PRODUCT DEVELOPMENT
+         ======================================================= -->
+
+    <section class="objects">
+
+      <div class="objects-image">
+        <img
+          class="reveal"
+          src="/images/material-development.jpg"
+          alt="Material development"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="objects-detail">
+        <img
+          class="reveal"
+          src="/images/material-detail.jpg"
+          alt="Material detail"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="objects-copy">
+
+        <p>
+          We are a passionate team,
+          but not quite the usual one.
+        </p>
+
+        <br><br>
+
+        <p>
+          We spend a lot of time thinking about
+          materials, construction, development,
+          function and good gear.
+        </p>
+
+        <br><br>
+
+        <p>
+          Sometimes we develop a material ourselves.
+          Sometimes we look for one somewhere else.
+          Either way, we are very selective.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         THE OBJECT AFTER DELIVERY
+         ======================================================= -->
+
+    <section class="after">
+
+      <div class="after-copy">
+
+        <p>
+          We don't think the relationship
+          with an object ends when you take it home.
+        </p>
+
+        <p>
+          A good piece should endure time.
+        </p>
+
+        <p>
+          And if something happens to it,
+          you should be able to come back.
+        </p>
+
+        <p>
+          We can alter it.
+          We can repair it.
+          We can keep working on it.
+        </p>
+
+        <p>
+          It is your piece.
+        </p>
+
+      </div>
+
+      <div class="after-image">
+        <img
+          class="reveal"
+          src="/images/worn-piece.jpg"
+          alt="A worn object"
+          loading="lazy"
+        >
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PATINA
+         ======================================================= -->
+
+    <section class="people">
+
+      <div class="people-title">
+        Let it become yours.
+      </div>
+
+      <div class="people-grid">
+
+        <div class="people-image">
+          <img
+            class="reveal"
+            src="/images/patina.jpg"
+            alt="Material showing natural wear"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="people-copy">
+
+          <p>
+            We like patina.
+          </p>
+
+          <p>
+            But not the kind that is made
+            to look old before it has lived.
+          </p>
+
+          <p>
+            We mean the marks that arrive
+            because you used something.
+          </p>
+
+          <p>
+            Because you travelled with it.
+            Because you worked in it.
+            Because it went somewhere with you.
+          </p>
+
+          <p>
+            Time should leave a trace.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PEOPLE / NATURAL IMAGE
+         ======================================================= -->
+
+    <section class="world">
+
+      <div class="world-copy">
+
+        <p>
+          We are fascinated by things
+          that feel completely natural.
+        </p>
+
+      </div>
+
+      <div class="world-image">
+        <img
+          class="reveal"
+          src="/images/natural-portrait.jpg"
+          alt="Natural portrait"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="world-note">
+        Good proportion.
+        Natural light.
+        The relief of skin.
+        Soft skin.
+        A face that does not need
+        to perform for the camera.
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         THE WORLD AROUND IT
+         ======================================================= -->
+
+    <section class="world">
+
+      <div class="world-copy">
+
+        <p>
+          We like the things around
+          the things we make.
+        </p>
+
+      </div>
+
+      <div class="world-image">
+        <img
+          class="reveal"
+          src="/images/land.jpg"
+          alt="Landscape"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="world-note">
+        A large piece of land.
+        Endemic plants.
+        An old house.
+        A workshop.
+        An office.
+        A place where the work
+        and the world around it
+        can exist together.
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         WHO WE ARE DRAWN TO
+         ======================================================= -->
+
+    <section class="letter">
+
+      <div class="letter-inner">
+
+        <p>
+          We are drawn to people who have travelled,
+          whether they had much money for it or not.
+        </p>
+
+        <p class="indent">
+          People who went by backpack,
+          by car, by whatever was possible.
+        </p>
+
+        <p>
+          People who have endured some things.
+          People from different places.
+          People who speak several languages.
+        </p>
+
+        <p class="small">
+          People who understand quickly when
+          something is worth knowing.
+        </p>
+
+        <p>
+          People who understand why trees matter.
+        </p>
+
+        <p>
+          People who like touching materials,
+          trying things, experimenting.
+        </p>
+
+        <p>
+          Adventurous people who can still be
+          extremely simple in everyday life.
+        </p>
+
+        <p class="last">
+          That is closer to our DNA.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         BELIEF
+         ======================================================= -->
+
+    <section class="belief">
+
+      <p>
+        We believe good things
+        take time to do.
+        <br><br>
+        And that a good thing
+        should have enough time
+        to become part of a life.
+      </p>
+
+    </section>
+
+
+    <!-- =======================================================
+         CLOSING LETTER
+         ======================================================= -->
+
+    <section class="closing">
+
+      <div class="closing-inner">
+
+        <p>
+          Arbre Nuage is a place for that.
+        </p>
+
+        <p>
+          For making.
+          For looking.
+          For touching.
+          For talking.
+          For waiting.
+          For finding something
+          worth keeping.
+        </p>
+
+        <p>
+          And for coming back.
+        </p>
+
+        <div class="signature">
+          Arbre Nuage
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer>
+
+    <div class="footer-line">
 
       <span>
-        SHAPE MATTER © 2026
+        © <span id="year"></span> Arbre Nuage
       </span>
 
-      <span>
-        <a href="privacy.html">Privacy</a>
-        ·
-        <a href="terms.html">Terms</a>
-      </span>
+      <div class="legal">
 
-    </footer>
+        <a href="/privacy">
+          Privacy
+        </a>
 
-  </div>
+        <a href="/terms">
+          Terms
+        </a>
+
+        <a
+          href="https://instagram.com/arbrenuage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+    revealItems.forEach((item) => {
+      observer.observe(item);
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
