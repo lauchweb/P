@@ -10,15 +10,16 @@
 
   <style>
     :root {
-      --paper: #e9e2d6;
+      --paper: #eee6d7;
       --ink: #292a25;
       --muted: #77756d;
-      --line: rgba(41, 42, 37, 0.18);
+      --line: rgba(41, 42, 37, 0.16);
 
       --serif:
         "Iowan Old Style",
+        "Baskerville",
+        "Libre Baskerville",
         "Palatino Linotype",
-        "Book Antiqua",
         Palatino,
         Georgia,
         serif;
@@ -30,6 +31,7 @@
         sans-serif;
 
       --pad: clamp(20px, 4vw, 56px);
+      --measure: 720px;
     }
 
     * {
@@ -53,7 +55,6 @@
       color: inherit;
       text-decoration: none;
     }
-
 
     /* HEADER */
 
@@ -79,16 +80,12 @@
       font-size: 10px;
     }
 
-
     /* LETTER INTRO */
 
     .letter-intro {
-      max-width: 980px;
+      max-width: var(--measure);
       margin: 0 auto;
-      padding:
-        80px
-        var(--pad)
-        55px;
+      padding: 80px var(--pad) 45px;
     }
 
     .letter-meta {
@@ -108,112 +105,95 @@
       color: var(--muted);
     }
 
-
     /* LETTER */
 
     .letter {
-      max-width: 760px;
+      max-width: var(--measure);
       margin: 0 auto;
-
-      padding:
-        0 var(--pad)
-        130px;
+      padding: 0 var(--pad) 90px;
     }
 
     .salutation {
-      margin: 0 0 55px;
+      margin: 0 0 48px;
 
       font-family: var(--serif);
-      font-size: 23px;
-      line-height: 1.3;
+      font-size: 22px;
+      line-height: 1.35;
     }
 
     .letter p {
-      margin: 0 0 30px;
+      margin: 0 0 26px;
 
       font-family: var(--serif);
-      font-size: clamp(19px, 1.7vw, 24px);
-      line-height: 1.48;
-      letter-spacing: -0.005em;
+      font-size: 19px;
+      line-height: 1.52;
+      letter-spacing: -0.003em;
     }
 
     .letter p.indent {
-      margin-left: 8%;
+      text-indent: 2.2em;
     }
 
-    .letter p.small {
-      max-width: 600px;
-
-      font-size: clamp(17px, 1.55vw, 21px);
-      line-height: 1.5;
+    .letter p.break {
+      margin-top: 48px;
     }
 
     .letter p.quiet {
       color: var(--muted);
     }
 
-    .letter p.break {
-      margin-top: 65px;
+    .letter p.small {
+      max-width: 600px;
+      font-size: 17px;
+      line-height: 1.55;
     }
 
-
-    /* ASIDE */
-
     .aside {
-      max-width: 520px;
+      max-width: 500px;
 
       margin:
-        70px
+        55px
         0
-        75px
-        8%;
+        60px
+        7%;
 
       font-family: var(--serif);
-      font-size: clamp(17px, 1.55vw, 21px);
-      line-height: 1.5;
+      font-size: 17px;
+      line-height: 1.55;
 
       color: var(--muted);
     }
 
-
     /* CLOSING */
 
     .closing {
-      max-width: 760px;
+      max-width: var(--measure);
       margin: 0 auto;
-
-      padding:
-        0 var(--pad)
-        140px;
+      padding: 0 var(--pad) 110px;
     }
 
     .closing p {
-      max-width: 620px;
+      max-width: 600px;
 
-      margin: 0 0 30px;
+      margin: 0 0 26px;
 
       font-family: var(--serif);
-      font-size: clamp(19px, 1.7vw, 24px);
-      line-height: 1.48;
+      font-size: 19px;
+      line-height: 1.52;
     }
 
     .signature {
-      margin-top: 55px;
+      margin-top: 52px;
 
       font-family: var(--serif);
-      font-size: 20px;
+      font-size: 19px;
       line-height: 1.5;
     }
-
 
     /* FOOTER */
 
     footer {
-      padding:
-        30px
-        var(--pad)
-        25px;
-
+      padding: 30px var(--pad) 25px;
       border-top: 1px solid var(--line);
     }
 
@@ -230,7 +210,6 @@
       display: flex;
       gap: 18px;
     }
-
 
     /* MOBILE */
 
@@ -250,7 +229,7 @@
 
       .letter-intro {
         padding-top: 60px;
-        padding-bottom: 40px;
+        padding-bottom: 35px;
       }
 
       .letter-meta {
@@ -258,18 +237,18 @@
       }
 
       .letter {
-        padding-bottom: 100px;
+        padding-bottom: 75px;
       }
 
       .salutation {
-        margin-bottom: 45px;
-        font-size: 21px;
+        margin-bottom: 40px;
+        font-size: 20px;
       }
 
       .letter p {
-        margin-bottom: 27px;
-        font-size: 19px;
-        line-height: 1.5;
+        margin-bottom: 23px;
+        font-size: 18px;
+        line-height: 1.54;
       }
 
       .letter p.indent {
@@ -281,30 +260,30 @@
       }
 
       .letter p.break {
-        margin-top: 50px;
+        margin-top: 40px;
       }
 
       .aside {
         margin:
-          55px
+          48px
           4%
-          60px;
+          52px;
 
         font-size: 17px;
-        line-height: 1.5;
       }
 
       .closing {
-        padding-bottom: 100px;
+        padding-bottom: 80px;
       }
 
       .closing p {
-        font-size: 19px;
-        line-height: 1.5;
+        font-size: 18px;
+        line-height: 1.54;
       }
 
       .signature {
-        font-size: 19px;
+        margin-top: 45px;
+        font-size: 18px;
       }
 
       .footer-line {
@@ -357,305 +336,154 @@
         To those who find their way here,
       </p>
 
-
       <p>
-        We have been trying to find a simple way
-        to tell you what Arbre Nuage is.
+        Arbre Nuage began with a simple feeling:
+        that some things are better discovered
+        than presented.
       </p>
 
       <p>
-        It is not very easy to put into a sentence.
+        A good piece of clothing. A useful object.
+        A beautiful material. A book found in the
+        right place. Someone who knows how to make
+        something properly.
       </p>
 
       <p>
-        There are clothes, objects, accessories,
-        materials, books, photographs and things
-        that we find useful, beautiful or simply
-        interesting.
-      </p>
-
-      <p>
-        But the things are not really the point.
-      </p>
-
-      <p>
-        What matters to us is the way we arrive at them.
+        These things tend to stay with you.
+        Not because they were made to be important,
+        but because they become part of ordinary life.
       </p>
 
       <p class="indent">
-        Slowly, usually.
-        Through conversation.
-        Through looking closely.
-        Through trying something,
-        changing it,
-        and trying again.
+        Perhaps that is why the idea of an address
+        matters to us. Somebody tells you about a place,
+        writes it down, and suggests that you go.
+        There is no great explanation. Only enough
+        curiosity to make the journey.
       </p>
 
       <p>
-        Sometimes by making something ourselves.
-        Sometimes by finding somebody who already
-        knows how to make it very well.
-      </p>
-
-      <p>
-        We have never felt that everything needs
-        to be made simply because we can make it.
-      </p>
-
-      <p>
-        There is something good about recognising
-        when somebody else has already done
-        the work properly.
+        That is how we would like Arbre Nuage to feel.
+        A place you arrive at rather than a place
+        that tries to call you in.
       </p>
 
 
       <p class="break">
-        Arbre Nuage began with a feeling more than
-        with a business plan.
+        The things themselves are important,
+        but so is the way they come into being.
       </p>
 
       <p>
-        The feeling of finding something quietly good.
+        Clothing is considered through cut,
+        proportion, movement and wear.
+        Objects are looked at from every side.
+        Materials are tested in the hand and in use.
       </p>
 
       <p>
-        A piece of clothing that fits in a way
-        you did not expect.
+        Sometimes the right thing already exists.
+        When it does, there is no need to make
+        another version simply for the sake of it.
+        Finding the person who already knows
+        how to do something well can be the better work.
       </p>
 
       <p>
-        A material with a particular weight
-        in the hand.
+        Sometimes nothing quite fits the purpose.
+        Then an idea has to be developed, tested,
+        changed and tested again.
       </p>
 
       <p>
-        An object that has been considered
-        from every side.
+        This can take time.
       </p>
 
       <p>
-        A person who knows a great deal about
-        something and is happy to talk about it.
-      </p>
-
-      <p>
-        We like those encounters.
-      </p>
-
-      <p>
-        We like when one thing leads naturally
-        to another.
-      </p>
-
-
-      <p class="break">
-        This is why we prefer people to come
-        without too much of a plan.
-      </p>
-
-      <p>
-        You may already know what you want.
-        You may not.
-      </p>
-
-      <p>
-        Either is fine.
-      </p>
-
-      <p>
-        We can talk about clothes.
-        We can talk about materials.
-        We can talk about making.
-        We can talk about travelling,
-        books, places, food, objects,
-        or whatever happens to come up.
-      </p>
-
-      <p>
-        There is no particular way
-        a conversation has to go.
-      </p>
-
-      <p>
-        You can look around.
-        You can ask questions.
-        You can touch things.
-      </p>
-
-      <p>
-        And you can leave without buying anything.
-      </p>
-
-      <p>
-        We think that is important.
-      </p>
-
-
-      <p class="break">
-        We are interested in things that are made
-        with enough attention that they do not need
-        to explain themselves.
-      </p>
-
-      <p>
-        The cut of a garment.
-        The weight of a fabric.
-        A seam placed exactly where it should be.
-        A button that feels right.
-        The way something moves when it is worn.
-      </p>
-
-      <p>
-        These details can be very small.
-      </p>
-
-      <p>
-        Most of the time, they are.
-      </p>
-
-      <p>
-        But together they change the experience
-        of using something every day.
-      </p>
-
-      <p class="small">
-        We are less interested in showing how much
-        thought went into something than in making
-        something that feels right once the thinking
-        is finished.
-      </p>
-
-
-      <p>
-        We also like the fact that making things
-        takes time.
-      </p>
-
-      <p>
-        Not because slowness is automatically better.
-        It isn't.
-      </p>
-
-      <p>
-        Sometimes something can be made quickly
-        and be exactly right.
-      </p>
-
-      <p>
-        But sometimes it cannot.
-      </p>
-
-      <p>
-        Sometimes a pattern needs to change.
-        A material needs another test.
-        A proportion needs to be lived with.
-        A first idea needs to be abandoned.
-      </p>
-
-      <p>
-        We would rather allow that to happen
-        than force an answer because it is convenient.
+        Not because slowness is a virtue by itself,
+        but because attention often needs time.
+        A proportion becomes clearer when lived with.
+        A material reveals something after use.
+        A first idea sometimes needs to disappear
+        before the right one becomes visible.
       </p>
 
       <div class="aside">
-        There is a certain pleasure in giving
-        something enough time to become itself.
-        We try to leave room for that.
+        The aim is not to make things complicated.
+        It is to give enough attention to arrive
+        at something that feels simple when finished.
       </div>
 
 
-      <p>
-        Once something leaves us,
-        the interesting part begins again.
+      <p class="break">
+        A piece eventually leaves the workshop.
       </p>
 
       <p>
-        It becomes part of somebody's everyday life.
+        Then it begins another life.
       </p>
 
       <p>
-        It is worn.
-        Packed.
-        Carried.
-        Washed.
-        Used.
-        Repaired.
-        Forgotten for a while.
-        Found again.
+        It is worn, carried, packed, washed,
+        taken somewhere, left somewhere,
+        repaired and worn again.
       </p>
 
       <p>
-        A good thing should be able to live
-        through all of that.
+        This is where an object becomes interesting
+        to us. Not when it is untouched, but when
+        it starts to belong to somebody.
       </p>
 
       <p>
-        We do not expect things to remain perfect.
+        A softened edge. A change in colour.
+        A mark from a journey. Something repaired
+        rather than replaced.
+      </p>
+
+      <p class="quiet">
+        These are not imperfections that need
+        to be hidden. They are simply signs
+        that something has been lived with.
       </p>
 
       <p>
-        In fact, we are rather fond of the opposite.
-      </p>
-
-      <p>
-        A small mark from a journey.
-        A softened edge.
-        A little change in colour.
-        The evidence that something has been used
-        and has been useful.
-      </p>
-
-      <p>
-        If something needs repairing,
-        we would rather repair it.
-      </p>
-
-      <p>
-        If something needs changing,
-        we can look at it again.
-      </p>
-
-      <p>
-        A relationship with an object should not
-        necessarily end because something has gone wrong.
+        If something needs altering or repairing,
+        the door remains open. A purchase does not
+        have to be the end of the relationship.
       </p>
 
 
       <p class="break">
-        We are interested in the world around
-        all of this too.
+        There is also the world around the objects.
       </p>
 
       <p>
-        In places.
-        In houses.
-        In roads.
-        In weather.
-        In the particular character of somewhere.
+        Places, houses, roads, weather, books,
+        photographs, trees and the particular
+        character of somewhere.
       </p>
 
       <p>
-        We like travelling without needing
-        to turn every journey into a story.
+        We are drawn to things that already have
+        a life of their own. Old alongside new.
+        Practical alongside beautiful.
+        The familiar beside something not yet known.
       </p>
 
       <p>
-        We like finding a place because somebody
-        told us about it.
+        Travel has something to do with this too.
+        Not necessarily the grand journey,
+        but the small detour, the road taken
+        because someone recommended it,
+        the place found almost by accident.
       </p>
 
       <p>
-        We like old things that have survived
-        without becoming precious.
-      </p>
-
-      <p>
-        We like new things when there is
-        a real reason for them to exist.
-      </p>
-
-      <p>
-        We like a mixture of the two.
+        There is a pleasure in discovering
+        something without having been told
+        exactly what to think about it.
       </p>
 
 
@@ -665,170 +493,91 @@
       </p>
 
       <p>
-        Somewhere with a little room around it.
+        A house with some history.
+        A table. Books. Clothes. Materials.
+        Tools. Somewhere to work and somewhere
+        to sit for a while.
       </p>
 
       <p>
-        A house with a history.
-        A place to work.
-        A table to sit around.
-        Some books.
-        Materials.
-        Clothes.
-        Tools.
+        A place where an afternoon can stretch
+        a little longer than expected.
+        Where a conversation can begin with
+        a piece of fabric and end somewhere else.
       </p>
 
       <p>
-        Somewhere people can stay a little longer
-        than they expected.
+        It does not need to be grand.
+        It only needs to feel right.
       </p>
 
       <p>
-        Somewhere a conversation can begin
-        with a piece of fabric and end somewhere
-        completely different.
-      </p>
-
-      <p>
-        We do not know exactly what that place
-        will become.
-      </p>
-
-      <p>
-        We are quite happy about that.
+        The exact shape of it is still unknown.
+        That is part of the pleasure.
       </p>
 
 
       <p class="break">
-        The people we hope to meet are difficult
-        to describe.
+        The people who find their way here
+        are difficult to describe.
       </p>
 
       <p>
-        They are not necessarily interested
-        in the same things.
+        They may come from different places,
+        dress differently, work differently,
+        and care about completely different things.
       </p>
 
       <p>
-        They may dress completely differently.
-        They may come from very different places.
+        Perhaps what connects them is simpler:
+        they notice.
       </p>
 
       <p>
-        But perhaps they share a certain curiosity.
+        They are curious about how something works.
+        They care about the difference between
+        something good and something merely new.
+        They can travel with little.
+        They can stay somewhere unfamiliar.
+        They can spend an afternoon without
+        needing to fill every minute.
       </p>
 
       <p>
-        They notice things.
-      </p>
-
-      <p>
-        They ask why something was made that way.
-      </p>
-
-      <p>
-        They are comfortable with a little uncertainty.
-      </p>
-
-      <p>
-        They can travel with very little
-        and still come home with a story.
-      </p>
-
-      <p>
-        They understand that good things
-        do not always announce themselves.
+        They are particular without being precious.
+        Curious without being restless.
+        Interested in the world without needing
+        to make a display of it.
       </p>
 
       <p class="small">
-        Curious, but not restless.
-        Particular, but not precious.
-        Interested in the world,
-        without needing to make a display of it.
-      </p>
-
-
-      <p>
-        Perhaps we will recognise each other
-        simply by talking.
-      </p>
-
-      <p>
-        Somebody will ask a question.
-        We will show them something.
-        They will tell us about something
-        they found somewhere else.
-      </p>
-
-      <p>
-        The conversation will take longer
-        than expected.
-      </p>
-
-      <p>
-        That would be enough.
+        The kind of person who turns an object over
+        before deciding. Who notices a seam, a handle,
+        a weight, a texture. Who asks one more question
+        because the answer might be interesting.
       </p>
 
 
       <p class="break">
-        We do not want Arbre Nuage to feel
-        like a place where everything has already
-        been decided.
+        That is probably enough explanation.
       </p>
 
       <p>
-        There should be room for discovery.
+        Arbre Nuage is a place for clothes,
+        objects, materials, books, ideas
+        and the conversations that happen around them.
       </p>
 
       <p>
-        Room for a new material.
-        A new person.
-        A new place.
-        A new idea.
+        A place to look closely.
+        To take your time.
+        To find something useful or beautiful.
+        To change your mind.
+        To leave without buying anything.
       </p>
 
       <p>
-        Room to change our minds.
-      </p>
-
-      <p>
-        Room to make something simply because
-        we have become curious about it.
-      </p>
-
-      <p>
-        And room to do nothing at all.
-      </p>
-
-
-      <p>
-        So perhaps that is the simplest explanation.
-      </p>
-
-      <p>
-        Arbre Nuage is a place for things
-        we think are worth spending time with.
-      </p>
-
-      <p>
-        Clothes.
-        Objects.
-        Materials.
-        People.
-        Places.
-        Ideas.
-      </p>
-
-      <p>
-        We are interested in how they are made,
-        where they come from,
-        how they are used,
-        and what happens when they become
-        part of someone's life.
-      </p>
-
-      <p>
-        Nothing more complicated than that.
+        The rest is better understood in person.
       </p>
 
     </article>
@@ -847,22 +596,18 @@
       </p>
 
       <p>
-        Come and look around.
-        Ask questions.
+        Come in. Look around. Ask questions.
         Sit down for a while.
       </p>
 
       <p>
-        Perhaps we will have something
-        to show you.
+        Perhaps there will be something
+        worth taking home.
       </p>
 
       <p>
-        Perhaps you will show us something instead.
-      </p>
-
-      <p>
-        Either way, we will be glad you came.
+        Perhaps there will simply be a good
+        conversation.
       </p>
 
       <div class="signature">
