@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Arbre Nuage — An address for things that take time</title>
+  <title>Arbre Nuage — An address for things worth taking time with</title>
 
   <meta
     name="description"
-    content="Arbre Nuage is an address for bespoke clothing and accessories, materials, objects and things made with time."
+    content="Arbre Nuage is an address for bespoke clothing, accessories, materials and objects made slowly, considered carefully and meant to be lived with."
   >
 
   <meta name="author" content="Arbre Nuage">
@@ -20,10 +20,10 @@
 
   <style>
     :root {
-      --paper: #E8E1D5;
-      --ink: #252A24;
-      --muted: #686B63;
-      --line: rgba(37, 42, 36, 0.18);
+      --paper: #e8e1d5;
+      --ink: #292c26;
+      --muted: #74756d;
+      --line: rgba(41, 44, 38, .18);
 
       --serif:
         "Iowan Old Style",
@@ -39,7 +39,7 @@
         Arial,
         sans-serif;
 
-      --pad: clamp(20px, 3vw, 48px);
+      --pad: clamp(21px, 3.4vw, 52px);
     }
 
     * {
@@ -48,6 +48,7 @@
 
     html {
       background: var(--paper);
+      color: var(--ink);
       scroll-behavior: smooth;
     }
 
@@ -80,6 +81,7 @@
     header {
       position: fixed;
       z-index: 20;
+
       top: 0;
       left: 0;
 
@@ -89,9 +91,8 @@
       align-items: center;
       justify-content: space-between;
 
-      padding: 22px var(--pad);
+      padding: 21px var(--pad);
 
-      color: var(--ink);
       mix-blend-mode: multiply;
     }
 
@@ -99,13 +100,13 @@
       font-family: var(--sans);
       font-size: 12px;
       line-height: 1;
-      letter-spacing: 0.055em;
+      letter-spacing: .055em;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
-      gap: 28px;
+      gap: 27px;
 
       font-family: var(--sans);
       font-size: 11px;
@@ -128,7 +129,7 @@
 
       background: currentColor;
 
-      transition: width 300ms ease;
+      transition: width .3s ease;
     }
 
     nav a:hover::after {
@@ -137,44 +138,46 @@
 
 
     /* =========================================================
-       TYPE
-       ========================================================= */
-
-    .serif {
-      font-family: var(--serif);
-    }
-
-    .eyebrow {
-      font-family: var(--sans);
-      font-size: 10px;
-      line-height: 1.4;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-
-    /* =========================================================
        HERO
-
-       The first impression should feel like finding an address.
        ========================================================= */
 
     .hero {
       min-height: 100svh;
 
-      padding: 86px var(--pad) 30px;
+      padding:
+        82px
+        var(--pad)
+        34px;
 
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      font-family: var(--sans);
+      font-size: 10px;
+      line-height: 1.3;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    .hero-top span:last-child {
+      text-align: right;
     }
 
     .hero-image {
-      height: 72vh;
-      min-height: 470px;
+      height: min(68vh, 820px);
 
       overflow: hidden;
+
+      margin-top: 25px;
     }
 
     .hero-image img {
@@ -183,26 +186,27 @@
 
     .hero-bottom {
       display: grid;
-      grid-template-columns: 1fr 280px;
+      grid-template-columns: minmax(0, 1fr) 260px;
+
       gap: 50px;
 
       align-items: end;
 
-      padding-top: 32px;
+      padding-top: 28px;
     }
 
     .hero-title {
       margin: 0;
 
       font-family: var(--serif);
-      font-size: clamp(68px, 11vw, 170px);
+      font-size: clamp(64px, 10.5vw, 165px);
       font-weight: 400;
-      line-height: 0.76;
-      letter-spacing: -0.06em;
+      line-height: .76;
+      letter-spacing: -.065em;
     }
 
     .hero-note {
-      max-width: 250px;
+      max-width: 245px;
 
       font-family: var(--serif);
       font-size: 21px;
@@ -211,167 +215,240 @@
 
 
     /* =========================================================
-       ADDRESS
-
-       This is the emotional centre of the first part.
+       THE ADDRESS
        ========================================================= */
 
     .address {
       min-height: 100svh;
 
-      padding: 25vh var(--pad);
+      padding:
+        19vh
+        var(--pad)
+        20vh;
 
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 12vw;
+      grid-template-columns: .78fr 1.22fr;
+
+      gap: 11vw;
 
       align-items: center;
     }
 
     .address-image {
-      height: 72vh;
+      height: 69vh;
     }
 
     .address-copy {
-      max-width: 700px;
+      max-width: 760px;
     }
 
     .address-copy p {
-      margin: 0 0 42px;
+      margin: 0 0 39px;
 
       font-family: var(--serif);
-      font-size: clamp(31px, 4vw, 58px);
-      line-height: 1.04;
-      letter-spacing: -0.025em;
+      font-size: clamp(32px, 4.15vw, 61px);
+      line-height: 1.025;
+      letter-spacing: -.027em;
     }
 
     .address-copy p:last-child {
       margin-bottom: 0;
     }
 
+    .quiet-line {
+      margin-top: 65px !important;
+
+      max-width: 570px;
+
+      font-size: clamp(23px, 2.6vw, 37px) !important;
+      line-height: 1.12 !important;
+
+      color: var(--muted);
+    }
+
 
     /* =========================================================
-       LETTER FRAGMENT
-
-       Not the full philosophy. Just enough to create curiosity.
+       THE PEOPLE
        ========================================================= */
 
-    .fragment {
-      padding: 15vh var(--pad) 28vh;
+    .people {
+      padding:
+        6vh
+        var(--pad)
+        25vh;
     }
 
-    .fragment-inner {
-      max-width: 980px;
-      margin: 0 auto;
+    .people-inner {
+      max-width: 1050px;
+
+      margin-left: 9%;
     }
 
-    .fragment-mark {
-      margin-bottom: 90px;
+    .people-label {
+      margin-bottom: 65px;
+
+      font-family: var(--sans);
+      font-size: 10px;
+      line-height: 1.3;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+
+      color: var(--muted);
     }
 
-    .fragment p {
-      max-width: 850px;
+    .people p {
+      margin: 0 0 48px;
 
-      margin: 0 0 52px;
+      max-width: 900px;
 
       font-family: var(--serif);
-      font-size: clamp(34px, 4.8vw, 68px);
-      line-height: 1.02;
-      letter-spacing: -0.035em;
+      font-size: clamp(34px, 4.6vw, 69px);
+      line-height: 1.01;
+      letter-spacing: -.038em;
     }
 
-    .fragment p.offset {
-      margin-left: 15%;
+    .people p.offset {
+      margin-left: 13%;
     }
 
-    .fragment p.small {
+    .people p.small {
       max-width: 620px;
 
-      font-size: clamp(25px, 3.1vw, 42px);
-      line-height: 1.08;
+      margin-top: 80px;
+
+      font-size: clamp(24px, 2.8vw, 39px);
+      line-height: 1.09;
     }
 
 
     /* =========================================================
        APPOINTMENT
-
-       Simple. No ecommerce language.
        ========================================================= */
 
     .appointment {
-      padding: 0 var(--pad) 30vh;
+      padding:
+        0
+        var(--pad)
+        27vh;
     }
 
     .appointment-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.08fr .92fr;
 
       gap: 10vw;
+
       align-items: center;
     }
 
     .appointment-image {
-      height: 78vh;
+      height: 80vh;
     }
 
     .appointment-copy {
-      max-width: 580px;
+      max-width: 540px;
+    }
+
+    .appointment-copy .label {
+      margin-bottom: 55px;
+
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+
+      color: var(--muted);
     }
 
     .appointment-copy p {
-      margin: 0 0 34px;
+      margin: 0 0 31px;
 
       font-family: var(--serif);
-      font-size: clamp(27px, 3.3vw, 47px);
-      line-height: 1.06;
-      letter-spacing: -0.02em;
+      font-size: clamp(29px, 3.35vw, 48px);
+      line-height: 1.055;
+      letter-spacing: -.018em;
+    }
+
+    .appointment-copy p:last-child {
+      margin-bottom: 0;
     }
 
 
     /* =========================================================
        MATERIALS
-
-       Let the images do work that the old copy was doing.
        ========================================================= */
 
     .materials {
-      padding: 5vh var(--pad) 30vh;
+      padding:
+        0
+        var(--pad)
+        28vh;
+    }
+
+    .materials-intro {
+      max-width: 720px;
+
+      margin:
+        0 0 90px
+        13%;
+
+      font-family: var(--serif);
+      font-size: clamp(29px, 3.5vw, 51px);
+      line-height: 1.04;
+      letter-spacing: -.025em;
     }
 
     .materials-large {
-      width: 73%;
-      height: 84vh;
+      width: 72%;
+      height: 83vh;
+
       margin-left: auto;
     }
 
     .materials-small {
-      width: 38%;
-      height: 53vh;
+      width: 37%;
+      height: 52vh;
 
-      margin-top: -17vh;
-      margin-left: 8%;
+      margin:
+        -16vh
+        0
+        0
+        7%;
 
       position: relative;
       z-index: 2;
     }
 
     .materials-caption {
-      width: 38%;
-      margin: 22px 0 0 8%;
+      width: 37%;
+
+      margin:
+        21px
+        0
+        0
+        7%;
+
+      font-family: var(--sans);
+      font-size: 9px;
+      line-height: 1.35;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+
+      color: var(--muted);
     }
 
 
     /* =========================================================
        TIME
-
-       Only introduce the idea here.
-       About will explain it.
        ========================================================= */
 
     .time {
       min-height: 100svh;
 
-      padding: 20vh var(--pad) 25vh;
+      padding:
+        16vh
+        var(--pad)
+        22vh;
 
       display: flex;
       align-items: center;
@@ -381,7 +458,8 @@
       width: 100%;
 
       display: grid;
-      grid-template-columns: 1fr 0.75fr;
+      grid-template-columns: 1fr .72fr;
+
       gap: 12vw;
 
       align-items: center;
@@ -389,51 +467,104 @@
 
     .time-heading {
       font-family: var(--serif);
-      font-size: clamp(78px, 12vw, 185px);
-      line-height: 0.74;
-      letter-spacing: -0.065em;
+      font-size: clamp(78px, 12vw, 182px);
+      line-height: .73;
+      letter-spacing: -.065em;
     }
 
     .time-copy {
-      max-width: 500px;
+      max-width: 510px;
 
       font-family: var(--serif);
-      font-size: clamp(26px, 3vw, 42px);
+      font-size: clamp(27px, 3.05vw, 43px);
       line-height: 1.06;
+      letter-spacing: -.018em;
+    }
+
+
+    /* =========================================================
+       LIVED WITH
+       ========================================================= */
+
+    .lived {
+      padding:
+        0
+        var(--pad)
+        28vh;
+    }
+
+    .lived-grid {
+      display: grid;
+
+      grid-template-columns: .9fr 1.1fr;
+
+      gap: 10vw;
+
+      align-items: end;
+    }
+
+    .lived-image {
+      height: 78vh;
+    }
+
+    .lived-copy {
+      max-width: 620px;
+
+      padding-bottom: 7vh;
+    }
+
+    .lived-copy p {
+      margin: 0 0 39px;
+
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.3vw, 47px);
+      line-height: 1.055;
+      letter-spacing: -.02em;
+    }
+
+    .lived-copy .muted {
+      color: var(--muted);
     }
 
 
     /* =========================================================
        WORLD
-
-       The world around Arbre Nuage.
        ========================================================= */
 
     .world {
-      padding: 0 var(--pad) 30vh;
+      padding:
+        0
+        var(--pad)
+        28vh;
     }
 
     .world-intro {
       max-width: 850px;
 
-      margin: 0 0 15vh 10%;
+      margin:
+        0
+        0
+        13vh
+        10%;
 
       font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 88px);
-      line-height: 0.9;
-      letter-spacing: -0.045em;
+      font-size: clamp(43px, 6vw, 88px);
+      line-height: .89;
+      letter-spacing: -.045em;
     }
 
     .world-grid {
       display: grid;
-      grid-template-columns: 0.78fr 1.22fr;
+
+      grid-template-columns: .78fr 1.22fr;
+
       gap: 24px;
 
       align-items: end;
     }
 
     .world-one {
-      height: 66vh;
+      height: 65vh;
     }
 
     .world-two {
@@ -441,9 +572,13 @@
     }
 
     .world-caption {
-      max-width: 430px;
+      max-width: 460px;
 
-      margin: 22px 0 0 auto;
+      margin:
+        24px
+        0
+        0
+        auto;
 
       font-family: var(--serif);
       font-size: 23px;
@@ -452,40 +587,16 @@
 
 
     /* =========================================================
-       IMAGE / HUMAN PRESENCE
+       ARBRE NUAGE
        ========================================================= */
 
-    .portrait {
-      padding: 0 var(--pad) 30vh;
-    }
-
-    .portrait-image {
-      width: 80%;
-      height: 90vh;
-      margin: auto;
-    }
-
-    .portrait-copy {
-      max-width: 600px;
-
-      margin: 35px auto 0;
-
-      font-family: var(--serif);
-      font-size: clamp(25px, 2.9vw, 41px);
-      line-height: 1.07;
-    }
-
-
-    /* =========================================================
-       BREATH
-
-       The page should eventually become almost empty.
-       ========================================================= */
-
-    .breath {
+    .name {
       min-height: 100svh;
 
-      padding: 15vh var(--pad);
+      padding:
+        15vh
+        var(--pad)
+        19vh;
 
       display: flex;
       align-items: center;
@@ -494,70 +605,73 @@
       text-align: center;
     }
 
-    .breath p {
-      max-width: 1050px;
+    .name-inner {
+      max-width: 1080px;
+    }
 
-      margin: 0;
+    .name-title {
+      margin: 0 0 70px;
 
       font-family: var(--serif);
-      font-size: clamp(52px, 7.5vw, 112px);
-      line-height: 0.86;
-      letter-spacing: -0.055em;
+      font-size: clamp(75px, 12vw, 180px);
+      font-weight: 400;
+      line-height: .76;
+      letter-spacing: -.07em;
+    }
+
+    .name-copy {
+      max-width: 680px;
+
+      margin: auto;
+
+      font-family: var(--serif);
+      font-size: clamp(25px, 3vw, 42px);
+      line-height: 1.07;
     }
 
 
     /* =========================================================
-       CLOSING
-
-       Quiet invitation, not a CTA.
+       FINAL IMAGE / BREATH
        ========================================================= */
 
-    .closing {
-      padding: 12vh var(--pad) 28vh;
+    .breath {
+      padding:
+        0
+        var(--pad)
+        24vh;
+    }
+
+    .breath-image {
+      width: 100%;
+      height: 76vh;
+    }
+
+    .breath-line {
+      max-width: 850px;
+
+      margin:
+        70px
+        auto
+        0;
 
       text-align: center;
-    }
-
-    .closing p {
-      max-width: 760px;
-
-      margin: 0 auto 60px;
 
       font-family: var(--serif);
-      font-size: clamp(34px, 4.5vw, 65px);
-      line-height: 0.96;
-      letter-spacing: -0.035em;
-    }
-
-    .closing a {
-      display: inline-block;
-
-      font-family: var(--sans);
-      font-size: 11px;
-      line-height: 1;
-
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-
-      padding-bottom: 6px;
-
-      border-bottom: 1px solid var(--ink);
+      font-size: clamp(38px, 5.5vw, 79px);
+      line-height: .91;
+      letter-spacing: -.05em;
     }
 
 
     /* =========================================================
        FOOTER
-
-       Exactly:
-       Privacy / Terms / Follow
-
-       No address.
-       No contact.
-       No Instagram handle.
        ========================================================= */
 
     footer {
-      padding: 80px var(--pad) 28px;
+      padding:
+        72px
+        var(--pad)
+        28px;
 
       border-top: 1px solid var(--line);
     }
@@ -576,12 +690,11 @@
 
     .legal {
       display: flex;
-      align-items: center;
       gap: 18px;
     }
 
     .legal a {
-      transition: color 200ms ease;
+      transition: color .2s ease;
     }
 
     .legal a:hover {
@@ -590,7 +703,7 @@
 
 
     /* =========================================================
-       REVEALS
+       IMAGE REVEAL
        ========================================================= */
 
     .reveal {
@@ -599,8 +712,8 @@
       transform: scale(1.025);
 
       transition:
-        opacity 1.5s ease,
-        transform 2.2s cubic-bezier(0.2, 0.6, 0.2, 1);
+        opacity 1.4s ease,
+        transform 2.1s cubic-bezier(.2, .6, .2, 1);
     }
 
     .reveal.visible {
@@ -628,12 +741,17 @@
       }
 
       .hero {
-        padding-top: 75px;
+        padding-top: 72px;
+        padding-bottom: 27px;
+      }
+
+      .hero-top {
+        font-size: 9px;
       }
 
       .hero-image {
-        height: 64vh;
-        min-height: 430px;
+        height: 63vh;
+        min-height: 420px;
       }
 
       .hero-bottom {
@@ -641,53 +759,67 @@
       }
 
       .hero-title {
-        margin-bottom: 30px;
+        margin-top: 27px;
+        margin-bottom: 28px;
+
+        font-size: 67px;
+        line-height: .78;
       }
 
       .hero-note {
-        max-width: 260px;
+        font-size: 20px;
       }
 
       .address {
         display: block;
-        padding-top: 18vh;
-        padding-bottom: 22vh;
+
+        padding-top: 16vh;
+        padding-bottom: 20vh;
       }
 
       .address-image {
         height: 62vh;
-        margin-bottom: 60px;
+        margin-bottom: 58px;
       }
 
       .address-copy p {
         font-size: 31px;
-        line-height: 1.09;
+        line-height: 1.08;
       }
 
-      .fragment {
-        padding-top: 12vh;
-        padding-bottom: 22vh;
+      .address-copy .quiet-line {
+        margin-top: 50px !important;
+        font-size: 23px !important;
       }
 
-      .fragment-mark {
-        margin-bottom: 60px;
+      .people {
+        padding-bottom: 20vh;
       }
 
-      .fragment p {
-        font-size: 34px;
-        line-height: 1.1;
-      }
-
-      .fragment p.offset {
+      .people-inner {
         margin-left: 0;
       }
 
-      .fragment p.small {
-        font-size: 26px;
+      .people-label {
+        margin-bottom: 50px;
+      }
+
+      .people p {
+        font-size: 34px;
+        line-height: 1.08;
+      }
+
+      .people p.offset {
+        margin-left: 0;
+      }
+
+      .people p.small {
+        margin-top: 60px;
+        font-size: 24px;
       }
 
       .appointment {
-        padding-bottom: 22vh;
+        padding-bottom: 21vh;
       }
 
       .appointment-grid {
@@ -695,30 +827,43 @@
       }
 
       .appointment-image {
-        height: 62vh;
-        margin-bottom: 55px;
+        height: 63vh;
+        margin-bottom: 58px;
+      }
+
+      .appointment-copy .label {
+        margin-bottom: 45px;
       }
 
       .appointment-copy p {
         font-size: 29px;
-        line-height: 1.1;
       }
 
       .materials {
         padding-bottom: 22vh;
       }
 
+      .materials-intro {
+        margin-left: 0;
+        margin-bottom: 60px;
+
+        font-size: 29px;
+      }
+
       .materials-large {
         width: 100%;
-        height: 67vh;
+        height: 66vh;
       }
 
       .materials-small {
         width: 70%;
-        height: 44vh;
+        height: 43vh;
 
-        margin-top: -11vh;
-        margin-left: 5%;
+        margin:
+          -10vh
+          0
+          0
+          5%;
       }
 
       .materials-caption {
@@ -727,8 +872,10 @@
       }
 
       .time {
-        padding-top: 15vh;
-        padding-bottom: 20vh;
+        min-height: 90svh;
+
+        padding-top: 12vh;
+        padding-bottom: 18vh;
       }
 
       .time-inner {
@@ -736,14 +883,34 @@
       }
 
       .time-heading {
-        margin-bottom: 75px;
+        margin-bottom: 70px;
 
         font-size: 82px;
       }
 
       .time-copy {
+        font-size: 27px;
+      }
+
+      .lived {
+        padding-bottom: 22vh;
+      }
+
+      .lived-grid {
+        display: block;
+      }
+
+      .lived-image {
+        height: 65vh;
+        margin-bottom: 55px;
+      }
+
+      .lived-copy {
+        padding-bottom: 0;
+      }
+
+      .lived-copy p {
         font-size: 28px;
-        line-height: 1.1;
       }
 
       .world {
@@ -752,7 +919,7 @@
 
       .world-intro {
         margin-left: 0;
-        margin-bottom: 80px;
+        margin-bottom: 70px;
 
         font-size: 45px;
       }
@@ -767,43 +934,45 @@
       }
 
       .world-two {
-        height: 68vh;
+        height: 67vh;
       }
 
       .world-caption {
         margin-left: 0;
+
         font-size: 22px;
       }
 
-      .portrait {
-        padding-bottom: 22vh;
+      .name {
+        min-height: 88svh;
       }
 
-      .portrait-image {
-        width: 100%;
-        height: 68vh;
+      .name-title {
+        margin-bottom: 55px;
+
+        font-size: 76px;
       }
 
-      .portrait-copy {
-        font-size: 27px;
-        line-height: 1.1;
+      .name-copy {
+        font-size: 25px;
       }
 
       .breath {
-        min-height: 85svh;
+        padding-bottom: 19vh;
       }
 
-      .breath p {
-        font-size: 51px;
-        line-height: 0.91;
+      .breath-image {
+        height: 66vh;
       }
 
-      .closing {
-        padding-bottom: 22vh;
+      .breath-line {
+        margin-top: 55px;
+
+        font-size: 39px;
       }
 
-      .closing p {
-        font-size: 36px;
+      footer {
+        padding-top: 65px;
       }
 
       .footer-line {
@@ -838,18 +1007,35 @@
 
 
     <!-- =======================================================
-         01 — ARRIVAL
+         ARRIVAL
          ======================================================= -->
 
     <section class="hero">
 
+      <div class="hero-top">
+
+        <span>
+          From somewhere in the world
+        </span>
+
+        <span>
+          An address<br>
+          worth finding
+        </span>
+
+      </div>
+
+
       <div class="hero-image">
+
         <img
           class="reveal"
           src="/images/hero.jpg"
           alt="Arbre Nuage"
         >
+
       </div>
+
 
       <div class="hero-bottom">
 
@@ -858,8 +1044,9 @@
         </h1>
 
         <div class="hero-note">
-          An address you may hear about
-          from someone you meet somewhere.
+          A place for things made slowly,
+          considered carefully,
+          and lived with for a long time.
         </div>
 
       </div>
@@ -868,33 +1055,42 @@
 
 
     <!-- =======================================================
-         02 — THE ADDRESS
+         THE ADDRESS
          ======================================================= -->
 
     <section class="address">
 
       <div class="address-image">
+
         <img
           class="reveal"
           src="/images/address.jpg"
           alt=""
           loading="lazy"
         >
+
       </div>
+
 
       <div class="address-copy">
 
         <p>
-          Someone tells you about a place.
+          Sometimes an address
+          is not something you search for.
         </p>
 
         <p>
-          Maybe they write the street down
-          for you on a piece of paper.
+          Someone gives it to you.
         </p>
 
         <p>
-          They tell you that you should go.
+          They write it down,
+          tell you a little about the road,
+          and say you should go.
+        </p>
+
+        <p class="quiet-line">
+          This is that kind of place.
         </p>
 
       </div>
@@ -903,37 +1099,41 @@
 
 
     <!-- =======================================================
-         03 — DISCOVERY
+         PEOPLE
          ======================================================= -->
 
-    <section class="fragment">
+    <section class="people">
 
-      <div class="fragment-inner">
+      <div class="people-inner">
 
-        <div class="fragment-mark eyebrow">
-          Arbre Nuage
+        <div class="people-label">
+          For people who notice
         </div>
 
         <p>
-          Not everyone needs to know
-          where it is.
+          For people who have travelled
+          without needing much.
         </p>
 
         <p class="offset">
-          Some people are simply curious
-          enough to find out.
-        </p>
-
-        <p class="small">
-          People who travel.
-          People who notice things.
-          People who have spent time somewhere
-          without needing to turn it into a story.
+          Who have slept somewhere unfamiliar,
+          crossed a country by road,
+          spent an afternoon in a field,
+          or learned something useful
+          from someone they had just met.
         </p>
 
         <p>
-          People who understand when
-          something is worth staying with.
+          People who recognise a good thing
+          before somebody has explained
+          why it is good.
+        </p>
+
+        <p class="small">
+          Curious about materials.
+          Curious about places.
+          Curious about people.
+          Comfortable with the simple things.
         </p>
 
       </div>
@@ -942,7 +1142,7 @@
 
 
     <!-- =======================================================
-         04 — THE APPOINTMENT
+         APPOINTMENT
          ======================================================= -->
 
     <section class="appointment">
@@ -950,41 +1150,42 @@
       <div class="appointment-grid">
 
         <div class="appointment-image">
+
           <img
             class="reveal"
             src="/images/appointment.jpg"
             alt=""
             loading="lazy"
           >
+
         </div>
+
 
         <div class="appointment-copy">
 
+          <div class="label">
+            By appointment
+          </div>
+
           <p>
-            You come by appointment.
+            You come in.
           </p>
 
           <p>
-            We talk.
+            We talk for a while.
           </p>
 
           <p>
-            You look around.
+            There are things to look at
+            and things to touch.
           </p>
 
           <p>
-            You touch things.
+            You may leave with nothing.
           </p>
 
           <p>
-            Materials.
-            Cloth.
-            Leather.
-            Objects.
-          </p>
-
-          <p>
-            You might leave without anything.
+            That is perfectly fine.
           </p>
 
         </div>
@@ -995,38 +1196,53 @@
 
 
     <!-- =======================================================
-         05 — MATERIAL
+         MATERIALS
          ======================================================= -->
 
     <section class="materials">
 
+      <div class="materials-intro">
+
+        The beginning is usually
+        somewhere between a conversation
+        and a piece of material.
+
+      </div>
+
+
       <div class="materials-large">
+
         <img
           class="reveal"
           src="/images/materials-large.jpg"
-          alt="Material"
+          alt="Material in the workshop"
           loading="lazy"
         >
+
       </div>
 
+
       <div class="materials-small">
+
         <img
           class="reveal"
           src="/images/material-detail.jpg"
           alt="Material detail"
           loading="lazy"
         >
+
       </div>
 
-      <div class="materials-caption eyebrow">
-        Things are better understood in the hand.
+
+      <div class="materials-caption">
+        Materials are meant to be handled.
       </div>
 
     </section>
 
 
     <!-- =======================================================
-         06 — TIME
+         TIME
          ======================================================= -->
 
     <section class="time">
@@ -1034,25 +1250,27 @@
       <div class="time-inner">
 
         <div class="time-heading">
-          Take<br>
-          your time.
+          No<br>
+          hurry.
         </div>
+
 
         <div class="time-copy">
 
-          There is no rush here.
+          Some ideas need a few days.
 
           <br><br>
 
-          You return another day.
+          Some materials need another attempt.
 
           <br><br>
 
-          We talk again.
+          Some decisions are better made
+          after you have gone home.
 
           <br><br>
 
-          Something begins to take shape.
+          We let them.
 
         </div>
 
@@ -1062,105 +1280,175 @@
 
 
     <!-- =======================================================
-         07 — THE WORLD
+         LIVED WITH
+         ======================================================= -->
+
+    <section class="lived">
+
+      <div class="lived-grid">
+
+        <div class="lived-image">
+
+          <img
+            class="reveal"
+            src="/images/lived.jpg"
+            alt=""
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="lived-copy">
+
+          <p>
+            Eventually, something leaves
+            the workshop.
+          </p>
+
+          <p>
+            It goes with you.
+          </p>
+
+          <p>
+            Then it starts becoming yours.
+          </p>
+
+          <p class="muted">
+            Wear it.
+            Travel with it.
+            Mark it.
+            Repair it.
+            Change it when life changes.
+          </p>
+
+          <p>
+            We would like our things
+            to become better records of a life,
+            rather than things kept away from it.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         WORLD
          ======================================================= -->
 
     <section class="world">
 
       <div class="world-intro">
-        We like the world around
-        the things we make.
+
+        We like being around things
+        that already know how to exist.
+
       </div>
+
 
       <div class="world-grid">
 
         <div class="world-one">
+
           <img
             class="reveal"
             src="/images/field.jpg"
-            alt="Landscape"
+            alt="Field and vegetation"
             loading="lazy"
           >
+
         </div>
 
+
         <div class="world-two">
+
           <img
             class="reveal"
             src="/images/house.jpg"
             alt="House surrounded by vegetation"
             loading="lazy"
           >
+
         </div>
 
       </div>
 
+
       <div class="world-caption">
+
         Trees.
         Plants.
+        Weather.
         Old houses.
         Roads.
-        Weather.
-        Places where people have lived
-        for a long time.
+        Skin.
+        Light.
+        Things that do not need
+        to announce themselves.
+
       </div>
 
     </section>
 
 
     <!-- =======================================================
-         08 — PEOPLE / IMAGE
+         THE NAME
          ======================================================= -->
 
-    <section class="portrait">
+    <section class="name">
 
-      <div class="portrait-image">
-        <img
-          class="reveal"
-          src="/images/portrait.jpg"
-          alt="Portrait"
-          loading="lazy"
-        >
-      </div>
+      <div class="name-inner">
 
-      <div class="portrait-copy">
-        We are interested in things that feel
-        natural because they are natural.
+        <h2 class="name-title">
+          Arbre Nuage
+        </h2>
+
+        <div class="name-copy">
+
+          The tree, the cloud,
+          the rain that passes between them.
+
+          <br><br>
+
+          Some things are so fundamental
+          that we can almost forget
+          how much they give us.
+
+        </div>
+
       </div>
 
     </section>
 
 
     <!-- =======================================================
-         09 — THE FEELING
+         BREATH
          ======================================================= -->
 
     <section class="breath">
 
-      <p>
-        A place somewhere in the middle
-        of this strange world.
-        <br><br>
-        A breath.
-      </p>
+      <div class="breath-image">
 
-    </section>
+        <img
+          class="reveal"
+          src="/images/breath.jpg"
+          alt=""
+          loading="lazy"
+        >
+
+      </div>
 
 
-    <!-- =======================================================
-         10 — CLOSING
-         ======================================================= -->
+      <div class="breath-line">
 
-    <section class="closing">
+        Somewhere in the middle
+        of this strange world,
+        a place to slow down.
 
-      <p>
-        Perhaps one day
-        someone will give you
-        our address.
-      </p>
-
-      <a href="/visit">
-        Visit Arbre Nuage
-      </a>
+      </div>
 
     </section>
 
@@ -1179,6 +1467,7 @@
       <span>
         © <span id="year"></span> Arbre Nuage
       </span>
+
 
       <div class="legal">
 
@@ -1206,28 +1495,40 @@
 
 
   <script>
-    const revealItems = document.querySelectorAll(".reveal");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+    const revealItems =
+      document.querySelectorAll(".reveal");
 
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      {
-        threshold: 0.08
-      }
-    );
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          });
+
+        },
+        {
+          threshold: 0.08
+        }
+      );
+
 
     revealItems.forEach((item) => {
       observer.observe(item);
     });
 
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
+
   </script>
 
 </body>
