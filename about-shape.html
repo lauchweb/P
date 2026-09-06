@@ -20,13 +20,6 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <style>
-    /*
-    ============================================================
-    ARBRE NUAGE
-    Homepage
-    ============================================================
-    */
-
     :root {
       --paper: #E8E1D5;
       --ink: #252A24;
@@ -49,15 +42,12 @@
         sans-serif;
 
       --pad: clamp(20px, 3vw, 48px);
-      --serif-size: clamp(27px, 3.15vw, 48px);
     }
 
 
-    /*
-    ============================================================
-    RESET
-    ============================================================
-    */
+    /* ========================================================
+       RESET
+       ======================================================== */
 
     * {
       box-sizing: border-box;
@@ -72,8 +62,10 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
+
       font-family: var(--sans);
       font-weight: 400;
+
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -91,17 +83,22 @@
     }
 
 
-    /*
-    ============================================================
-    HEADER
-    ============================================================
-    */
+    /* ========================================================
+       HEADER
+
+       One line.
+       No second logo.
+       No collapsing title.
+       No oversized branding.
+       ======================================================== */
 
     header {
       position: fixed;
       z-index: 100;
+
       top: 0;
       left: 0;
+
       width: 100%;
 
       display: flex;
@@ -111,19 +108,23 @@
       padding: 22px var(--pad);
 
       color: var(--ink);
+
       mix-blend-mode: multiply;
     }
 
     .wordmark {
       font-family: var(--sans);
+
       font-size: 12px;
       line-height: 1;
-      letter-spacing: 0.06em;
+
+      letter-spacing: 0.055em;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
+      align-items: center;
       gap: 28px;
 
       font-size: 11px;
@@ -136,6 +137,7 @@
 
     nav a::after {
       content: "";
+
       position: absolute;
       left: 0;
       bottom: -5px;
@@ -153,11 +155,9 @@
     }
 
 
-    /*
-    ============================================================
-    GENERAL TYPOGRAPHY
-    ============================================================
-    */
+    /* ========================================================
+       GENERAL
+       ======================================================== */
 
     .serif {
       font-family: var(--serif);
@@ -176,11 +176,9 @@
     }
 
 
-    /*
-    ============================================================
-    HERO
-    ============================================================
-    */
+    /* ========================================================
+       HERO
+       ======================================================== */
 
     .hero {
       min-height: 100vh;
@@ -232,61 +230,65 @@
     }
 
 
-    /*
-    ============================================================
-    LETTER — OPENING
-    ============================================================
-    */
+    /* ========================================================
+       LETTER
+
+       More generous type.
+       Narrower reading measure.
+       Less "website manifesto", more actual letter.
+       ======================================================== */
 
     .letter {
       padding:
-        24vh
+        23vh
         var(--pad)
         30vh;
     }
 
     .letter-inner {
-      max-width: 790px;
-      margin-left: 10vw;
+      width: min(100%, 900px);
+      margin-left: 8vw;
     }
 
     .letter-mark {
-      margin-bottom: 90px;
+      margin-bottom: 85px;
     }
 
     .letter p {
-      margin: 0 0 42px;
+      max-width: 760px;
+
+      margin: 0 0 48px;
 
       font-family: var(--serif);
-      font-size: var(--serif-size);
-      line-height: 1.06;
-      letter-spacing: -0.02em;
+      font-size: clamp(30px, 3.55vw, 52px);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -0.018em;
     }
 
     .letter p.indent {
-      margin-left: 13%;
+      margin-left: 12%;
     }
 
     .letter p.small {
-      max-width: 590px;
-      font-size: clamp(21px, 2.2vw, 31px);
-      line-height: 1.14;
+      max-width: 650px;
+
+      font-size: clamp(24px, 2.7vw, 38px);
+      line-height: 1.15;
     }
 
     .space-large {
-      height: 24vh;
+      height: 25vh;
     }
 
     .space-medium {
-      height: 12vh;
+      height: 13vh;
     }
 
 
-    /*
-    ============================================================
-    ADDRESS
-    ============================================================
-    */
+    /* ========================================================
+       ADDRESS
+       ======================================================== */
 
     .address-section {
       padding: 0 var(--pad) 28vh;
@@ -314,16 +316,14 @@
 
       font-family: var(--serif);
       font-size: clamp(28px, 3.2vw, 46px);
-      line-height: 1.03;
+      line-height: 1.06;
       letter-spacing: -0.025em;
     }
 
 
-    /*
-    ============================================================
-    ENCOUNTER
-    ============================================================
-    */
+    /* ========================================================
+       ENCOUNTER
+       ======================================================== */
 
     .encounter {
       padding: 12vh var(--pad) 30vh;
@@ -355,11 +355,9 @@
     }
 
 
-    /*
-    ============================================================
-    MATERIALS
-    ============================================================
-    */
+    /* ========================================================
+       MATERIALS
+       ======================================================== */
 
     .materials {
       padding: 0 var(--pad) 30vh;
@@ -388,11 +386,9 @@
     }
 
 
-    /*
-    ============================================================
-    DEVELOPMENT
-    ============================================================
-    */
+    /* ========================================================
+       DEVELOPMENT
+       ======================================================== */
 
     .development {
       padding: 15vh var(--pad) 30vh;
@@ -405,7 +401,6 @@
 
     .development-heading {
       max-width: 850px;
-
       margin-bottom: 14vh;
 
       font-family: var(--serif);
@@ -429,11 +424,9 @@
     }
 
 
-    /*
-    ============================================================
-    TIME
-    ============================================================
-    */
+    /* ========================================================
+       TIME
+       ======================================================== */
 
     .time {
       min-height: 100vh;
@@ -470,11 +463,9 @@
     }
 
 
-    /*
-    ============================================================
-    DELIVERY
-    ============================================================
-    */
+    /* ========================================================
+       DELIVERY
+       ======================================================== */
 
     .delivery {
       padding: 10vh var(--pad) 30vh;
@@ -504,15 +495,13 @@
 
       font-family: var(--serif);
       font-size: clamp(28px, 3.2vw, 46px);
-      line-height: 1.03;
+      line-height: 1.06;
     }
 
 
-    /*
-    ============================================================
-    LIFE / REPAIR
-    ============================================================
-    */
+    /* ========================================================
+       LIFE
+       ======================================================== */
 
     .life {
       padding: 10vh var(--pad) 30vh;
@@ -525,7 +514,6 @@
 
     .life-heading {
       max-width: 750px;
-
       margin-bottom: 13vh;
 
       font-family: var(--serif);
@@ -549,11 +537,9 @@
     }
 
 
-    /*
-    ============================================================
-    PATINA
-    ============================================================
-    */
+    /* ========================================================
+       PATINA
+       ======================================================== */
 
     .patina {
       padding: 0 var(--pad) 30vh;
@@ -572,6 +558,7 @@
       z-index: 2;
 
       padding: 45px 0 0 35px;
+
       background: var(--paper);
     }
 
@@ -580,15 +567,13 @@
 
       font-family: var(--serif);
       font-size: clamp(28px, 3vw, 43px);
-      line-height: 1.04;
+      line-height: 1.06;
     }
 
 
-    /*
-    ============================================================
-    THE PEOPLE
-    ============================================================
-    */
+    /* ========================================================
+       PEOPLE
+       ======================================================== */
 
     .people {
       padding: 15vh var(--pad) 30vh;
@@ -621,11 +606,9 @@
     }
 
 
-    /*
-    ============================================================
-    WORLD
-    ============================================================
-    */
+    /* ========================================================
+       WORLD
+       ======================================================== */
 
     .world {
       padding: 0 var(--pad) 30vh;
@@ -666,11 +649,34 @@
     }
 
 
-    /*
-    ============================================================
-    NAME
-    ============================================================
-    */
+    /* ========================================================
+       IMAGE / DOCUMENTATION
+       ======================================================== */
+
+    .image-section {
+      padding: 0 var(--pad) 30vh;
+    }
+
+    .image-main {
+      width: 82%;
+      height: 90vh;
+      margin: auto;
+    }
+
+    .image-copy {
+      max-width: 540px;
+
+      margin: 35px auto 0;
+
+      font-family: var(--serif);
+      font-size: clamp(23px, 2.5vw, 35px);
+      line-height: 1.08;
+    }
+
+
+    /* ========================================================
+       NAME
+       ======================================================== */
 
     .name {
       padding: 10vh var(--pad) 28vh;
@@ -704,11 +710,9 @@
     }
 
 
-    /*
-    ============================================================
-    BREATH
-    ============================================================
-    */
+    /* ========================================================
+       BREATH
+       ======================================================== */
 
     .breath {
       min-height: 100vh;
@@ -735,15 +739,12 @@
     }
 
 
-    /*
-    ============================================================
-    INVITATION
-    ============================================================
-    */
+    /* ========================================================
+       INVITATION
+       ======================================================== */
 
     .invitation {
       padding: 10vh var(--pad) 25vh;
-
       text-align: center;
     }
 
@@ -770,11 +771,17 @@
     }
 
 
-    /*
-    ============================================================
-    FOOTER
-    ============================================================
-    */
+    /* ========================================================
+       FOOTER
+
+       Deliberately reduced:
+       no address
+       no contact
+       no Instagram handle
+       no extra navigation
+
+       Only legal links + Follow.
+       ======================================================== */
 
     footer {
       padding: 90px var(--pad) 30px;
@@ -782,39 +789,10 @@
       border-top: 1px solid rgba(37, 42, 36, 0.18);
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      min-height: 280px;
-    }
-
-    .footer-name {
-      font-size: 12px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .footer-address {
-      font-family: var(--serif);
-      font-size: 24px;
-      line-height: 1.05;
-    }
-
-    .footer-right {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      font-size: 11px;
-    }
-
     .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-
-      margin-top: 100px;
 
       font-size: 10px;
       color: var(--muted);
@@ -823,14 +801,21 @@
     .legal {
       display: flex;
       gap: 18px;
+      align-items: center;
+    }
+
+    .legal a {
+      transition: color 200ms ease;
+    }
+
+    .legal a:hover {
+      color: var(--ink);
     }
 
 
-    /*
-    ============================================================
-    IMAGE REVEAL
-    ============================================================
-    */
+    /* ========================================================
+       IMAGE REVEAL
+       ======================================================== */
 
     .reveal {
       opacity: 0;
@@ -847,11 +832,9 @@
     }
 
 
-    /*
-    ============================================================
-    MOBILE
-    ============================================================
-    */
+    /* ========================================================
+       MOBILE
+       ======================================================== */
 
     @media (max-width: 720px) {
 
@@ -864,7 +847,7 @@
       }
 
       nav {
-        gap: 15px;
+        gap: 16px;
       }
 
       .hero {
@@ -897,8 +880,18 @@
         margin-left: 0;
       }
 
+      .letter p {
+        max-width: 100%;
+        font-size: clamp(27px, 7vw, 36px);
+        line-height: 1.15;
+      }
+
       .letter p.indent {
         margin-left: 0;
+      }
+
+      .letter p.small {
+        font-size: clamp(23px, 6vw, 31px);
       }
 
       .space-large {
@@ -985,10 +978,6 @@
         padding: 35px 25px;
       }
 
-      .people-heading {
-        margin-bottom: 70px;
-      }
-
       .world-intro {
         margin-left: 0;
       }
@@ -1014,26 +1003,17 @@
         font-size: 51px;
       }
 
-      .footer-grid {
-        display: block;
-        min-height: auto;
-      }
-
-      .footer-name {
-        margin-bottom: 60px;
-      }
-
-      .footer-address {
-        margin-bottom: 60px;
+      .image-main {
+        width: 100%;
+        height: 68vh;
       }
 
       .footer-bottom {
         display: block;
-        margin-top: 110px;
       }
 
       .legal {
-        margin-top: 15px;
+        margin-top: 18px;
       }
     }
   </style>
@@ -1042,14 +1022,16 @@
 <body>
 
   <header>
-    <a href="/" class="wordmark">Arbre Nuage</a>
+
+    <a href="/" class="wordmark">
+      Arbre Nuage
+    </a>
 
     <nav>
-      <a href="/pieces">Pieces</a>
       <a href="/about">About</a>
-      <a href="/visit">Visit</a>
       <a href="/notes">Notes</a>
     </nav>
+
   </header>
 
 
@@ -1608,7 +1590,7 @@
 
 
     <!-- ======================================================
-         THE WORLD
+         WORLD
          ====================================================== -->
 
     <section class="world">
@@ -1657,15 +1639,9 @@
          IMAGE / DOCUMENTATION
          ====================================================== -->
 
-    <section class="image-section" style="
-      padding: 0 var(--pad) 30vh;
-    ">
+    <section class="image-section">
 
-      <div style="
-        width: 82%;
-        height: 90vh;
-        margin: auto;
-      ">
+      <div class="image-main">
         <img
           class="reveal"
           src="/images/person.jpg"
@@ -1674,13 +1650,8 @@
         >
       </div>
 
-      <div style="
-        max-width: 540px;
-        margin: 35px auto 0;
-        font-family: var(--serif);
-        font-size: clamp(23px, 2.5vw, 35px);
-        line-height: 1.08;
-      ">
+      <div class="image-copy">
+
         We like images that feel like they
         happened rather than images that
         were constructed to look natural.
@@ -1699,6 +1670,7 @@
         We like documenting things because
         sometimes an image makes us notice
         an idea we hadn't seen before.
+
       </div>
 
     </section>
@@ -1769,7 +1741,7 @@
 
 
     <!-- ======================================================
-         CLOSING OF FIRST LETTER
+         CLOSING
          ====================================================== -->
 
     <section class="invitation">
@@ -1800,40 +1772,6 @@
 
   <footer>
 
-    <div class="footer-grid">
-
-      <div class="footer-name">
-        Arbre Nuage
-      </div>
-
-      <div>
-
-        <div class="footer-address">
-          [Street / Road]<br>
-          [City]<br>
-          [Country]
-        </div>
-
-        <div class="footer-right" style="margin-top: 60px;">
-
-          <a href="mailto:hello@arbrenuage.com">
-            Contact
-          </a>
-
-          <a
-            href="https://instagram.com/arbrenuage"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @arbrenuage
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
     <div class="footer-bottom">
 
       <span>
@@ -1841,8 +1779,23 @@
       </span>
 
       <div class="legal">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
+
+        <a href="/privacy">
+          Privacy
+        </a>
+
+        <a href="/terms">
+          Terms
+        </a>
+
+        <a
+          href="https://instagram.com/arbrenuage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow
+        </a>
+
       </div>
 
     </div>
@@ -1851,12 +1804,6 @@
 
 
   <script>
-    /*
-    ============================================================
-    SMALL, QUIET IMAGE REVEAL
-    ============================================================
-    */
-
     const images = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver(
@@ -1876,13 +1823,6 @@
     images.forEach((image) => {
       observer.observe(image);
     });
-
-
-    /*
-    ============================================================
-    YEAR
-    ============================================================
-    */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
