@@ -4,26 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Arbre Nuage — An address for things worth taking time with</title>
+  <title>Arbre Nuage</title>
 
-  <meta
-    name="description"
-    content="A place for considered clothing, objects, materials, conversations and the quiet pleasures of making, travelling and living well."
-  >
-
-  <meta name="author" content="Arbre Nuage">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#E8E1D5">
-
-  <link rel="canonical" href="https://arbrenuage.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <style>
     :root {
-      --paper: #e8e1d5;
-      --ink: #292c26;
-      --muted: #74756d;
-      --line: rgba(41, 44, 38, .18);
+      --paper: #e9e2d6;
+      --ink: #292a25;
+      --muted: #77756d;
+      --line: rgba(41, 42, 37, 0.18);
 
       --serif:
         "Iowan Old Style",
@@ -39,7 +29,7 @@
         Arial,
         sans-serif;
 
-      --pad: clamp(22px, 4vw, 62px);
+      --pad: clamp(20px, 4vw, 56px);
     }
 
     * {
@@ -49,14 +39,12 @@
     html {
       background: var(--paper);
       color: var(--ink);
-      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -66,161 +54,98 @@
       text-decoration: none;
     }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
 
-
-    /* =========================================================
-       HEADER
-       ========================================================= */
+    /* HEADER */
 
     header {
-      position: fixed;
-      z-index: 20;
-
-      top: 0;
-      left: 0;
-
       width: 100%;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      padding: 21px var(--pad);
-
-      mix-blend-mode: multiply;
+      padding: 22px var(--pad);
     }
 
     .wordmark {
       font-family: var(--sans);
-      font-size: 12px;
-      line-height: 1;
-      letter-spacing: .055em;
+      font-size: 11px;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
-      gap: 27px;
-
+      gap: 24px;
       font-family: var(--sans);
-      font-size: 11px;
-      line-height: 1;
-    }
-
-    nav a {
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-
-      width: 0;
-      height: 1px;
-
-      background: currentColor;
-
-      transition: width .3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
+      font-size: 10px;
     }
 
 
-    /* =========================================================
-       LETTER INTRODUCTION
-       ========================================================= */
+    /* LETTER INTRO */
 
     .letter-intro {
-      max-width: 1120px;
-
+      max-width: 980px;
       margin: 0 auto;
-
       padding:
-        clamp(125px, 15vw, 210px)
+        80px
         var(--pad)
-        75px;
+        55px;
     }
 
     .letter-meta {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
 
-      padding-bottom: 18px;
+      padding-bottom: 14px;
 
       border-bottom: 1px solid var(--line);
 
       font-family: var(--sans);
-      font-size: 10px;
-      line-height: 1.35;
-      letter-spacing: .06em;
+      font-size: 9px;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
 
       color: var(--muted);
     }
 
-    .letter-meta span:last-child {
-      text-align: right;
-    }
 
-
-    /* =========================================================
-       LETTER
-       ========================================================= */
+    /* LETTER */
 
     .letter {
-      max-width: 920px;
-
+      max-width: 760px;
       margin: 0 auto;
 
       padding:
         0 var(--pad)
-        clamp(130px, 17vw, 230px);
+        130px;
     }
 
     .salutation {
-      margin:
-        0
-        0
-        75px;
+      margin: 0 0 55px;
 
       font-family: var(--serif);
-      font-size: clamp(25px, 2.5vw, 35px);
-      line-height: 1.15;
+      font-size: 23px;
+      line-height: 1.3;
     }
 
     .letter p {
-      margin:
-        0
-        0
-        43px;
+      margin: 0 0 30px;
 
       font-family: var(--serif);
-      font-size: clamp(25px, 2.8vw, 39px);
-      line-height: 1.17;
-      letter-spacing: -.012em;
+      font-size: clamp(19px, 1.7vw, 24px);
+      line-height: 1.48;
+      letter-spacing: -0.005em;
     }
 
     .letter p.indent {
-      margin-left: 12%;
+      margin-left: 8%;
     }
 
     .letter p.small {
-      max-width: 680px;
+      max-width: 600px;
 
-      font-size: clamp(21px, 2.25vw, 31px);
-      line-height: 1.22;
+      font-size: clamp(17px, 1.55vw, 21px);
+      line-height: 1.5;
     }
 
     .letter p.quiet {
@@ -228,118 +153,66 @@
     }
 
     .letter p.break {
-      margin-top: 100px;
+      margin-top: 65px;
     }
 
 
-    /* =========================================================
-       PHOTOGRAPHS
-       ========================================================= */
-
-    .photograph {
-      width: min(760px, 88vw);
-      height: min(760px, 72vw);
-
-      margin:
-        55px
-        0
-        105px
-        11%;
-    }
-
-    .photograph img {
-      object-position: center;
-    }
-
-    .caption {
-      margin-top: 12px;
-
-      font-family: var(--sans);
-      font-size: 9px;
-      line-height: 1.35;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-
-      color: var(--muted);
-    }
-
-    .side-photo {
-      width: 47%;
-      height: 570px;
-
-      margin:
-        95px
-        0
-        110px
-        45%;
-    }
-
-
-    /* =========================================================
-       LETTER ASIDE
-       ========================================================= */
+    /* ASIDE */
 
     .aside {
-      max-width: 430px;
+      max-width: 520px;
 
       margin:
-        115px
+        70px
         0
-        120px
-        27%;
+        75px
+        8%;
 
       font-family: var(--serif);
-      font-size: clamp(21px, 2.2vw, 30px);
-      line-height: 1.17;
+      font-size: clamp(17px, 1.55vw, 21px);
+      line-height: 1.5;
 
       color: var(--muted);
     }
 
 
-    /* =========================================================
-       CLOSING
-       ========================================================= */
+    /* CLOSING */
 
     .closing {
-      max-width: 920px;
-
+      max-width: 760px;
       margin: 0 auto;
 
       padding:
         0 var(--pad)
-        22vh;
+        140px;
     }
 
     .closing p {
-      max-width: 700px;
+      max-width: 620px;
 
-      margin:
-        0
-        0
-        45px;
+      margin: 0 0 30px;
 
       font-family: var(--serif);
-      font-size: clamp(26px, 3vw, 42px);
-      line-height: 1.14;
+      font-size: clamp(19px, 1.7vw, 24px);
+      line-height: 1.48;
     }
 
     .signature {
-      margin-top: 75px;
+      margin-top: 55px;
 
       font-family: var(--serif);
-      font-size: 27px;
+      font-size: 20px;
+      line-height: 1.5;
     }
 
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+    /* FOOTER */
 
     footer {
       padding:
-        70px
+        30px
         var(--pad)
-        27px;
+        25px;
 
       border-top: 1px solid var(--line);
     }
@@ -347,12 +220,9 @@
     .footer-line {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
 
       font-family: var(--sans);
-      font-size: 10px;
-      line-height: 1.2;
-
+      font-size: 9px;
       color: var(--muted);
     }
 
@@ -361,33 +231,8 @@
       gap: 18px;
     }
 
-    .legal a:hover {
-      color: var(--ink);
-    }
 
-
-    /* =========================================================
-       IMAGE REVEAL
-       ========================================================= */
-
-    .reveal {
-      opacity: 0;
-      transform: scale(1.025);
-
-      transition:
-        opacity 1.4s ease,
-        transform 2.1s cubic-bezier(.2, .6, .2, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -404,28 +249,27 @@
       }
 
       .letter-intro {
-        padding-top: 105px;
-        padding-bottom: 48px;
+        padding-top: 60px;
+        padding-bottom: 40px;
       }
 
       .letter-meta {
-        font-size: 9px;
+        font-size: 8px;
       }
 
       .letter {
-        padding-bottom: 120px;
+        padding-bottom: 100px;
       }
 
       .salutation {
-        margin-bottom: 55px;
-        font-size: 24px;
+        margin-bottom: 45px;
+        font-size: 21px;
       }
 
       .letter p {
-        margin-bottom: 35px;
-
-        font-size: 25px;
-        line-height: 1.18;
+        margin-bottom: 27px;
+        font-size: 19px;
+        line-height: 1.5;
       }
 
       .letter p.indent {
@@ -433,53 +277,34 @@
       }
 
       .letter p.small {
-        font-size: 21px;
+        font-size: 17px;
       }
 
       .letter p.break {
-        margin-top: 60px;
-      }
-
-      .photograph {
-        width: 100%;
-        height: 67vh;
-
-        margin:
-          55px
-          0
-          75px;
-      }
-
-      .side-photo {
-        width: 75%;
-        height: 48vh;
-
-        margin:
-          70px
-          0
-          80px
-          25%;
+        margin-top: 50px;
       }
 
       .aside {
         margin:
-          80px
-          5%
-          85px;
+          55px
+          4%
+          60px;
 
-        font-size: 21px;
+        font-size: 17px;
+        line-height: 1.5;
       }
 
       .closing {
-        padding-bottom: 135px;
+        padding-bottom: 100px;
       }
 
       .closing p {
-        font-size: 26px;
+        font-size: 19px;
+        line-height: 1.5;
       }
 
       .signature {
-        font-size: 25px;
+        font-size: 19px;
       }
 
       .footer-line {
@@ -487,12 +312,11 @@
       }
 
       .legal {
-        margin-top: 20px;
+        margin-top: 15px;
       }
     }
   </style>
 </head>
-
 
 <body>
 
@@ -512,34 +336,22 @@
 
   <main>
 
-
-    <!-- =======================================================
-         LETTER HEADING
-         ======================================================= -->
-
     <section class="letter-intro">
 
       <div class="letter-meta">
-
         <span>
-          A letter from somewhere in the world
+          A letter from Arbre Nuage
         </span>
 
         <span>
           06 / 09 / 2026
         </span>
-
       </div>
 
     </section>
 
 
-    <!-- =======================================================
-         THE LETTER
-         ======================================================= -->
-
     <article class="letter">
-
 
       <p class="salutation">
         To those who find their way here,
@@ -547,674 +359,505 @@
 
 
       <p>
-        We have been trying to find the right way
-        to tell you what this is.
+        We have been trying to find a simple way
+        to tell you what Arbre Nuage is.
       </p>
 
       <p>
-        Not what it sells, exactly.
-        That part is easy enough.
-        There are clothes, accessories, objects,
-        materials, things made by hand and things
-        made with machines.
+        It is not very easy to put into a sentence.
       </p>
 
       <p>
-        What is harder to explain is why we wanted
-        to make a place for them in the first place.
+        There are clothes, objects, accessories,
+        materials, books, photographs and things
+        that we find useful, beautiful or simply
+        interesting.
+      </p>
+
+      <p>
+        But the things are not really the point.
+      </p>
+
+      <p>
+        What matters to us is the way we arrive at them.
       </p>
 
       <p class="indent">
-        Perhaps it begins with the feeling of finding
-        a place that somebody did not make for everybody.
+        Slowly, usually.
+        Through conversation.
+        Through looking closely.
+        Through trying something,
+        changing it,
+        and trying again.
       </p>
 
       <p>
-        A place you hear about from another person.
-        An address written on a piece of paper.
-        A road you have never taken before.
-        A door that is not particularly remarkable
-        from the outside.
-      </p>
-
-
-      <div class="photograph">
-
-        <img
-          class="reveal"
-          src="/images/address.jpg"
-          alt="A quiet road leading somewhere"
-          loading="lazy"
-        >
-
-        <div class="caption">
-          Sometimes the road is part of the invitation.
-        </div>
-
-      </div>
-
-
-      <p>
-        You go because somebody you trust told you
-        that there was something worth seeing there.
+        Sometimes by making something ourselves.
+        Sometimes by finding somebody who already
+        knows how to make it very well.
       </p>
 
       <p>
-        Maybe they could not explain it very well.
-        Maybe that was part of the reason you went.
+        We have never felt that everything needs
+        to be made simply because we can make it.
       </p>
 
       <p>
-        We have always liked those kinds of discoveries.
-      </p>
-
-      <p>
-        The things that are not presented to you all at once.
-        The good restaurant at the end of an unremarkable road.
-        The old house you notice only because somebody
-        points it out.
-        The person who knows exactly where to find
-        the right material.
-        The tree that has grown in a place where it seems
-        it should not be able to grow.
-      </p>
-
-      <p>
-        There is a particular pleasure in being let in
-        on something rather than being sold something.
+        There is something good about recognising
+        when somebody else has already done
+        the work properly.
       </p>
 
 
       <p class="break">
-        That is the kind of place we wanted to make.
+        Arbre Nuage began with a feeling more than
+        with a business plan.
       </p>
 
       <p>
-        Somewhere to come without having to know
-        exactly what you are looking for.
+        The feeling of finding something quietly good.
       </p>
 
       <p>
-        You might come because you heard about a coat.
-        You might come because you wanted to see
-        how something was made.
-        You might come because you were passing through.
-        You might come because somebody told you
-        there was a person here who knew about leather,
-        or cloth, or wood, or some strange material
-        you had never heard of before.
+        A piece of clothing that fits in a way
+        you did not expect.
       </p>
 
       <p>
-        And you might leave without buying anything.
+        A material with a particular weight
+        in the hand.
       </p>
 
       <p>
-        We are quite comfortable with that.
-      </p>
-
-
-      <div class="side-photo">
-
-        <img
-          class="reveal"
-          src="/images/workshop.jpg"
-          alt="Hands and materials on a work table"
-          loading="lazy"
-        >
-
-      </div>
-
-
-      <p>
-        Because the conversation is part of it.
+        An object that has been considered
+        from every side.
       </p>
 
       <p>
-        So is the looking.
-        So is touching something and turning it over
-        to see how it has been put together.
+        A person who knows a great deal about
+        something and is happy to talk about it.
       </p>
 
       <p>
-        We like people who ask what something is made of.
-        People who notice a seam.
-        A button.
+        We like those encounters.
+      </p>
+
+      <p>
+        We like when one thing leads naturally
+        to another.
+      </p>
+
+
+      <p class="break">
+        This is why we prefer people to come
+        without too much of a plan.
+      </p>
+
+      <p>
+        You may already know what you want.
+        You may not.
+      </p>
+
+      <p>
+        Either is fine.
+      </p>
+
+      <p>
+        We can talk about clothes.
+        We can talk about materials.
+        We can talk about making.
+        We can talk about travelling,
+        books, places, food, objects,
+        or whatever happens to come up.
+      </p>
+
+      <p>
+        There is no particular way
+        a conversation has to go.
+      </p>
+
+      <p>
+        You can look around.
+        You can ask questions.
+        You can touch things.
+      </p>
+
+      <p>
+        And you can leave without buying anything.
+      </p>
+
+      <p>
+        We think that is important.
+      </p>
+
+
+      <p class="break">
+        We are interested in things that are made
+        with enough attention that they do not need
+        to explain themselves.
+      </p>
+
+      <p>
+        The cut of a garment.
         The weight of a fabric.
-        The way a pocket has been placed.
-        The way an object feels after it has been used
-        for a few years rather than five minutes.
+        A seam placed exactly where it should be.
+        A button that feels right.
+        The way something moves when it is worn.
+      </p>
+
+      <p>
+        These details can be very small.
+      </p>
+
+      <p>
+        Most of the time, they are.
+      </p>
+
+      <p>
+        But together they change the experience
+        of using something every day.
       </p>
 
       <p class="small">
-        Not because everything needs to be explained,
-        but because knowing how something came to exist
-        can change the way you look at it.
+        We are less interested in showing how much
+        thought went into something than in making
+        something that feels right once the thinking
+        is finished.
       </p>
 
 
       <p>
-        This is also why we spend so much time
-        with materials.
+        We also like the fact that making things
+        takes time.
       </p>
 
       <p>
-        Sometimes the right thing already exists.
-        Then the sensible thing is to find it,
-        understand it,
-        and leave it alone.
+        Not because slowness is automatically better.
+        It isn't.
       </p>
 
       <p>
-        Sometimes it does not exist.
+        Sometimes something can be made quickly
+        and be exactly right.
       </p>
 
       <p>
-        Then we have to make it.
-      </p>
-
-
-      <div class="photograph">
-
-        <img
-          class="reveal"
-          src="/images/materials-large.jpg"
-          alt="Materials being examined"
-          loading="lazy"
-        >
-
-        <div class="caption">
-          Before a thing has decided what it wants to become.
-        </div>
-
-      </div>
-
-
-      <p>
-        This is where things can become rather slow.
+        But sometimes it cannot.
       </p>
 
       <p>
-        A material behaves differently than expected.
-        A construction looks right on paper
-        and wrong when it is worn.
-        Something works perfectly except for one small thing
-        that becomes irritating every time you use it.
+        Sometimes a pattern needs to change.
+        A material needs another test.
+        A proportion needs to be lived with.
+        A first idea needs to be abandoned.
       </p>
 
       <p>
-        So we change it.
+        We would rather allow that to happen
+        than force an answer because it is convenient.
       </p>
-
-      <p>
-        Then we make it again.
-      </p>
-
-      <p>
-        And sometimes we realise that the first version
-        was better after all.
-      </p>
-
-      <p class="quiet">
-        We do not think this is wasted time.
-      </p>
-
-      <p>
-        Time is part of the material too.
-      </p>
-
-
-      <p class="break">
-        We have become suspicious of the idea
-        that everything should happen quickly.
-      </p>
-
-      <p>
-        Quickly chosen.
-        Quickly made.
-        Quickly photographed.
-        Quickly replaced.
-      </p>
-
-      <p>
-        There are things for which speed is wonderful.
-        This does not have to be one of them.
-      </p>
-
-      <p>
-        Some ideas need to sit around for a while.
-        Some decisions become obvious only after
-        you have gone home.
-        Some materials need another attempt.
-        Some conversations are better continued
-        a month later.
-      </p>
-
-      <p>
-        We would rather leave room for that.
-      </p>
-
 
       <div class="aside">
-        There is a difference between making something slowly
-        and simply making something inefficiently.
-        We are interested in the first.
-        The point is not slowness for its own sake.
-        The point is giving enough attention to know
-        when something is right.
+        There is a certain pleasure in giving
+        something enough time to become itself.
+        We try to leave room for that.
       </div>
 
 
       <p>
-        And when something finally leaves,
-        we do not really think of the work as finished.
+        Once something leaves us,
+        the interesting part begins again.
       </p>
 
       <p>
-        It goes with somebody.
+        It becomes part of somebody's everyday life.
       </p>
 
       <p>
-        It gets worn.
-        It gets packed into a bag.
-        It gets taken onto a train,
-        into a car,
-        through an airport,
-        into a house,
-        out into the rain.
+        It is worn.
+        Packed.
+        Carried.
+        Washed.
+        Used.
+        Repaired.
+        Forgotten for a while.
+        Found again.
       </p>
 
       <p>
-        Something gets spilled on it.
-        Something gets repaired.
-        A pocket becomes the pocket where somebody
-        always puts their keys.
+        A good thing should be able to live
+        through all of that.
       </p>
 
       <p>
-        Slowly, almost without noticing,
-        the thing stops being ours.
+        We do not expect things to remain perfect.
       </p>
 
       <p>
-        It becomes part of somebody else's life.
-      </p>
-
-
-      <div class="photograph">
-
-        <img
-          class="reveal"
-          src="/images/lived.jpg"
-          alt="A well-used object"
-          loading="lazy"
-        >
-
-        <div class="caption">
-          Things become interesting when they are used.
-        </div>
-
-      </div>
-
-
-      <p>
-        We like that very much.
+        In fact, we are rather fond of the opposite.
       </p>
 
       <p>
-        We do not want to make things so precious
-        that they become afraid of being used.
+        A small mark from a journey.
+        A softened edge.
+        A little change in colour.
+        The evidence that something has been used
+        and has been useful.
       </p>
 
       <p>
-        If something needs repairing, bring it back.
-        If it needs changing because your life changed,
-        let us see what can be done.
+        If something needs repairing,
+        we would rather repair it.
       </p>
 
       <p>
-        We would much rather repair a good thing
-        than watch it disappear because of something small.
+        If something needs changing,
+        we can look at it again.
       </p>
 
       <p>
-        And the marks that cannot be repaired—
-        those are different.
-      </p>
-
-      <p>
-        We like those.
-      </p>
-
-      <p class="small">
-        Not artificial ageing.
-        Not things manufactured to look as though
-        they have travelled when they have not.
-        Just the quiet evidence that something
-        has actually been somewhere.
-      </p>
-
-
-      <div class="side-photo">
-
-        <img
-          class="reveal"
-          src="/images/patina.jpg"
-          alt="A worn material showing signs of use"
-          loading="lazy"
-        >
-
-      </div>
-
-
-      <p>
-        Perhaps that is also why the world around things
-        matters to us almost as much as the things themselves.
-      </p>
-
-      <p>
-        We like photographs that feel like photographs,
-        rather than advertisements pretending to be them.
-      </p>
-
-      <p>
-        Skin that looks like skin.
-        Light that has simply arrived.
-        A face that remains a face.
-        Good proportions.
-        A little imperfection left where it belongs.
-      </p>
-
-      <p>
-        We like fields.
-        Trees.
-        Endemic plants.
-        Old houses.
-        Roads.
-        Weather.
-        Walls that have changed colour over time.
-        Places where you can tell that people
-        have been living there for a very long time.
-      </p>
-
-      <p>
-        Things that do not need to announce themselves.
-      </p>
-
-
-      <div class="photograph">
-
-        <img
-          class="reveal"
-          src="/images/field.jpg"
-          alt="Field and vegetation"
-          loading="lazy"
-        >
-
-        <div class="caption">
-          The things around us are part of the picture too.
-        </div>
-
-      </div>
-
-
-      <p>
-        There is a place we keep imagining.
-      </p>
-
-      <p>
-        Not because we have decided exactly what it should be,
-        but because the image keeps returning.
-      </p>
-
-      <p>
-        A piece of land somewhere.
-        A house that already has a history.
-        Perhaps an old colonial house,
-        perhaps something much simpler.
-      </p>
-
-      <p>
-        Endemic plants around it.
-        Trees that were there before us.
-        A little weather.
-        A long table.
-        Materials.
-        Books.
-        Clothes.
-        Tools.
-        Somewhere to work.
-        Somewhere to sit.
-        Somewhere to have a conversation
-        that unexpectedly lasts three hours.
-      </p>
-
-      <p class="indent">
-        It could become a workshop.
-        It could become an office.
-        It could become something closer to a salon.
-        Or perhaps none of those words would be quite right.
-      </p>
-
-      <p>
-        The point is not the name.
-      </p>
-
-      <p>
-        The point is having somewhere that allows
-        all these things to exist together:
-        making,
-        thinking,
-        meeting,
-        travelling,
-        collecting,
-        learning,
-        and occasionally doing absolutely nothing.
+        A relationship with an object should not
+        necessarily end because something has gone wrong.
       </p>
 
 
       <p class="break">
-        We imagine that the people who find this place
-        will probably have something in common.
+        We are interested in the world around
+        all of this too.
       </p>
 
       <p>
-        Not a particular age.
-        Not a particular profession.
-        Not a particular way of dressing.
+        In places.
+        In houses.
+        In roads.
+        In weather.
+        In the particular character of somewhere.
       </p>
 
       <p>
-        Something harder to describe.
+        We like travelling without needing
+        to turn every journey into a story.
       </p>
 
       <p>
-        They may have travelled with very little.
-        They may have crossed a country by car,
-        slept somewhere uncomfortable,
-        eaten somewhere they could not pronounce,
-        learned a useful thing from a stranger,
-        or changed their plans because somebody
-        told them about a road worth taking.
+        We like finding a place because somebody
+        told us about it.
       </p>
 
       <p>
-        They may come from one place
-        and somehow belong to several.
+        We like old things that have survived
+        without becoming precious.
       </p>
 
       <p>
-        They may speak several languages.
-        They may know how to spend an afternoon
-        doing nothing at all.
+        We like new things when there is
+        a real reason for them to exist.
       </p>
 
       <p>
-        They may understand why a tree matters
-        without needing the explanation.
+        We like a mixture of the two.
+      </p>
+
+
+      <p class="break">
+        Perhaps this is why we keep imagining
+        a place of our own.
       </p>
 
       <p>
-        They may notice a beautiful object immediately,
-        and then want to turn it around
-        to understand why.
+        Somewhere with a little room around it.
+      </p>
+
+      <p>
+        A house with a history.
+        A place to work.
+        A table to sit around.
+        Some books.
+        Materials.
+        Clothes.
+        Tools.
+      </p>
+
+      <p>
+        Somewhere people can stay a little longer
+        than they expected.
+      </p>
+
+      <p>
+        Somewhere a conversation can begin
+        with a piece of fabric and end somewhere
+        completely different.
+      </p>
+
+      <p>
+        We do not know exactly what that place
+        will become.
+      </p>
+
+      <p>
+        We are quite happy about that.
+      </p>
+
+
+      <p class="break">
+        The people we hope to meet are difficult
+        to describe.
+      </p>
+
+      <p>
+        They are not necessarily interested
+        in the same things.
+      </p>
+
+      <p>
+        They may dress completely differently.
+        They may come from very different places.
+      </p>
+
+      <p>
+        But perhaps they share a certain curiosity.
+      </p>
+
+      <p>
+        They notice things.
+      </p>
+
+      <p>
+        They ask why something was made that way.
+      </p>
+
+      <p>
+        They are comfortable with a little uncertainty.
+      </p>
+
+      <p>
+        They can travel with very little
+        and still come home with a story.
+      </p>
+
+      <p>
+        They understand that good things
+        do not always announce themselves.
       </p>
 
       <p class="small">
         Curious, but not restless.
-        Adventurous, but comfortable with very little.
-        Interested in the world without needing
-        to decorate themselves with it.
+        Particular, but not precious.
+        Interested in the world,
+        without needing to make a display of it.
       </p>
 
 
       <p>
-        Those are the people we hope to meet.
+        Perhaps we will recognise each other
+        simply by talking.
       </p>
 
       <p>
-        Although perhaps the best thing is
-        that we would not know them from a description.
+        Somebody will ask a question.
+        We will show them something.
+        They will tell us about something
+        they found somewhere else.
       </p>
 
       <p>
-        We would know them because the conversation
-        would probably continue longer than expected.
+        The conversation will take longer
+        than expected.
       </p>
 
       <p>
-        We would show them something.
-        They would tell us about something.
-        They would ask a question we had not thought of.
-        We would make some coffee.
-        Somebody would notice a material on the table.
-        And somehow an afternoon would disappear.
-      </p>
-
-
-      <div class="photograph">
-
-        <img
-          class="reveal"
-          src="/images/house.jpg"
-          alt="An old house surrounded by vegetation"
-          loading="lazy"
-        >
-
-        <div class="caption">
-          Somewhere between making a place and finding one.
-        </div>
-
-      </div>
-
-
-      <p>
-        Maybe that is what we are really trying to build.
-      </p>
-
-      <p>
-        Not simply a collection of things,
-        and not simply a place to buy them.
-      </p>
-
-      <p>
-        An address.
-      </p>
-
-      <p>
-        A point on the map where a certain kind of curiosity
-        can find other curiosity.
-      </p>
-
-      <p>
-        A place where a good object can sit beside
-        a piece of material,
-        beside a photograph,
-        beside a book,
-        beside a story from somewhere far away,
-        without any of them needing to explain
-        why they belong together.
-      </p>
-
-      <p>
-        A place where making something well
-        is enough of a reason.
-      </p>
-
-      <p>
-        A place where buying something is not
-        the only possible outcome of coming through the door.
-      </p>
-
-      <p>
-        A place where things can take the time
-        they actually require.
+        That would be enough.
       </p>
 
 
       <p class="break">
-        We do not know exactly where all of this will lead.
+        We do not want Arbre Nuage to feel
+        like a place where everything has already
+        been decided.
       </p>
 
       <p>
-        That is perhaps the part we like most.
+        There should be room for discovery.
       </p>
 
       <p>
-        We are still looking for materials.
-        Still making mistakes.
-        Still finding people.
-        Still travelling.
-        Still changing our minds.
-        Still discovering that something we thought
-        was important was not,
-        and something we nearly ignored was.
+        Room for a new material.
+        A new person.
+        A new place.
+        A new idea.
       </p>
 
       <p>
-        There will be clothes.
-        There will be objects.
-        There will be photographs,
-        materials,
-        places,
-        conversations,
-        and probably a few things
-        we have not yet thought of.
+        Room to change our minds.
       </p>
 
       <p>
-        We hope there will always be room for those.
+        Room to make something simply because
+        we have become curious about it.
       </p>
 
+      <p>
+        And room to do nothing at all.
+      </p>
+
+
+      <p>
+        So perhaps that is the simplest explanation.
+      </p>
+
+      <p>
+        Arbre Nuage is a place for things
+        we think are worth spending time with.
+      </p>
+
+      <p>
+        Clothes.
+        Objects.
+        Materials.
+        People.
+        Places.
+        Ideas.
+      </p>
+
+      <p>
+        We are interested in how they are made,
+        where they come from,
+        how they are used,
+        and what happens when they become
+        part of someone's life.
+      </p>
+
+      <p>
+        Nothing more complicated than that.
+      </p>
 
     </article>
 
 
-    <!-- =======================================================
-         CLOSING
-         ======================================================= -->
-
     <section class="closing">
 
       <p>
-        So, if somebody gives you this address,
+        If somebody gives you the address,
         come when you can.
       </p>
 
       <p>
-        You do not need to know what you are looking for.
+        You do not need to know exactly
+        what you are looking for.
       </p>
 
       <p>
         Come and look around.
         Ask questions.
-        Sit down.
-        Tell us where you have been.
-        Tell us what you have found.
+        Sit down for a while.
       </p>
 
       <p>
-        Perhaps we will have something to show you.
+        Perhaps we will have something
+        to show you.
+      </p>
+
+      <p>
         Perhaps you will show us something instead.
       </p>
 
@@ -1230,13 +873,8 @@
 
     </section>
 
-
   </main>
 
-
-  <!-- =========================================================
-       FOOTER
-       ========================================================= -->
 
   <footer>
 
@@ -1247,15 +885,8 @@
       </span>
 
       <div class="legal">
-
-        <a href="/privacy">
-          Privacy
-        </a>
-
-        <a href="/terms">
-          Terms
-        </a>
-
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
         <a
           href="https://instagram.com/arbrenuage"
           target="_blank"
@@ -1263,7 +894,6 @@
         >
           Follow
         </a>
-
       </div>
 
     </div>
@@ -1272,40 +902,8 @@
 
 
   <script>
-
-    const revealItems =
-      document.querySelectorAll(".reveal");
-
-
-    const observer =
-      new IntersectionObserver(
-        (entries) => {
-
-          entries.forEach((entry) => {
-
-            if (!entry.isIntersecting) return;
-
-            entry.target.classList.add("visible");
-
-            observer.unobserve(entry.target);
-
-          });
-
-        },
-        {
-          threshold: 0.08
-        }
-      );
-
-
-    revealItems.forEach((item) => {
-      observer.observe(item);
-    });
-
-
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
   </script>
 
 </body>
